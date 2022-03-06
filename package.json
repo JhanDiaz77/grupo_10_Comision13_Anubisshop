@@ -1,0 +1,23 @@
+{
+  "name": "grupo_10_comision13_anubisshop",
+  "version": "1.0.0",
+  "description": "![image](./public/imagen/Anubisshop.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop/issues"
+  },
+  "homepage": "https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
