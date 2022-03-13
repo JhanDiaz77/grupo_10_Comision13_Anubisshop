@@ -24,6 +24,7 @@ _Los integrantes del grupo 10 de la comision 13:_
 * [**Chosgo, Selena:**] -*Tengo 22 años, soy una persona paciente y capaz de adaptarme a diferentes situaciones, este es mi primer proyecto a desarrollar en grupo con los conocimientos de programación adquiridos.*-
 * [**Díaz, Jhan:**] - *Soy de Venezuela, tengo 43 años. Me encanta aprender; y esta experiencia me va ayudar a cumplir mi meta de ser programador de redes.*
 
+## Trello ⚙️
 _Sitio trello_
 
 * [www.trello.com](https://trello.com/b/6vioLGJR/sprints) - Tableros de trabajo del equipo.
