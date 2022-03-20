@@ -6,92 +6,6 @@
     padding: 0;
 }
 
-/* HEADER */
-header{
-    width: 100%;
-    padding-bottom: 5px;
-    
-    background-color: var(--color-Amarillo);
-}
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.burger-menu{
-    background-color: var(--color-VioletaClaro);
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-}
- 
-header img{
-    width: 50px;
-    margin: 10px;
-    border-radius: 50%;
-}
-header div.carrito{
-    width: 40px;
-    font-size: 1.5rem;
-}
-
-
-header .container div.user{
-    display: none;
-} 
-
-.header-buscador{
-    display: flex;
-    justify-content: center;   
-}
-div.search-bar{
-    height: 2rem;
-    width: 60%;
-    background-color:white ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-input.busqueda{
-    outline: none;
-    border-style: none;
-    margin-left: 5px;
-    width: 100%;
-    height: 2rem;
-}
-header div.header-buscador div.search-bar button{
-    border-style: none;
-    background-color: black;
-    color: white;
-    width: 35px;
-    height: 32px;
-    padding: 6px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;    
-}
-
-nav.nav-bar{
-    display: none;
-}
-nav ul{
-    display: flex;
-}
-li{
-    margin: 3px;
-    list-style: none;
-}
-
-/* FIN HEADER */
-
 /* INICIO DE FORM LOGIN */
 
 section{
@@ -174,80 +88,7 @@ i{
 
 /* MEDIA QUERIES */
 @media (min-width: 361px){
-    /* HEADER */
-    header .container{
-        padding-right: 8px;
-    }
 
-    header .burger-menu{
-        display: none;
-    }
-
-    header img{
-        width: 50px;
-        margin: 10px 20px;
-        border-radius: 50%;
-    }
-    header div.search-bar{
-        position: absolute;
-        top: 25px;
-        right: 8.9rem;
-        left: 19%;
-        height: 2rem;
-    }
-    input.busqueda{
-        outline: none;
-        border-style: none;
-        margin-left: 5px;
-        width: 100%;
-        height: 2rem;
-    }
-
-    header .container div.user{
-        display: block;
-        width: 30px;   /* 15% */
-        font-size: 1.5rem;
-        margin: 0 3px;
-        padding-top: 10px;
-    } 
-
-    header .container div.carrito{
-        position: relative;
-        left: 32%;
-        top: 5px;
-    }
-    header nav.nav-bar{
-        display: block;
-    }
-    ul.list{
-        display: none;
-    }
-    ul{
-        justify-content: space-evenly;
-        align-items: center;  
-    }
-    ul.top-list li {
-        height: 24px;
-        width: 6rem;
-        background-color: var(--color-VioletaClaro);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    ul.top-list a{
-        font-family: var(--fuente-roboto);
-        font-size: 11px;
-        margin: 5px;
-        padding: 3px;
-        background-color: var(--color-VioletaClaro);
-        height: 20px;
-        width: 100%;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-    }
-    /* FIN HEADER */
 
 
     /* form */
@@ -263,62 +104,13 @@ i{
 }
 
 @media (min-width: 769px){
-    /* header */
-    header img{
-        width: 90px;/* esto es lo que el header se vea muy grande en la version desktop */
-        margin: 10px 30px;
-        border-radius: 50%;
-    }
-
-    header div.search-bar{
-        position: absolute;
-        top: 40px;
-        right: 8.9rem;
-        left: 20%;
-    }
-    header .container div.carrito{
-        position: relative;
-        left: 33%;
-        top: -6px;
-    }
-    header .container div.user{
-        display: block;
-        width: 30px;
-        font-size: 1.5rem;
-        margin: 0 3px;
-        padding-bottom: 22px;
-    }
-    header nav ul.list{
-        display: none;
-    }
-    header nav ul{
-        justify-content: space-evenly;
-        align-items: center;   
-    }
-    header nav ul.top-list li {
-        height: 28px;
-        width: 8rem;
-        background-color: #4e51fb;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    ul.top-list a{
-        font-family: var(--fuente-roboto);
-        font-size: 14px;
-        background-color: #4e51fb;
-        color: white;
-        text-decoration: none;
-    }
-    /* FIN HEADER */
-
-
+    
     /* inicio form */
     section form{
-        width: 50%;
+        width: 40%;
         height: 85%;
         border-radius: 15px;
-        border:solid 1px #292BFD;    
+        border:solid 1px var(--color-VioletaOscuro);    
         padding: 8% 10px;
         margin: 0 1rem 10px 1rem;
     }
