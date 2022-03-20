@@ -6,9 +6,13 @@
      --color-Gris-oscuro: #666;
      --color-Gris-claro: #ebebeb;
      --color-Verde: #8BFF81;
+
      /* FUENTES */
+
      --fuente-roboto: 'Roboto', sans-serif;
+     
      /* TAMAÑOS DE FUENTE */
+
      --paragraphs: 12px;
      --title: 24px;
      --prices: 18px;
