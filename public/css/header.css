@@ -1,28 +1,4 @@
-:root{
-    /*  COLORES */
-     --color-Amarillo: #FFBD28;
-     --color-VioletaClaro: #5F60FE;
-     --color-VioletaOscuro: #292BFD;
-     --color-Gris-oscuro: #666;
-     --color-Gris-claro: #ebebeb;
-     --color-Verde: #8BFF81;
-     /* FUENTES */
-     --fuente-roboto: 'Roboto', sans-serif;
-     /* TAMAÑOS DE FUENTE */
-     --paragraphs: 12px;
-     --title: 24px;
-     --prices: 18px;
-     --discounts-descriptions: 16px;
- 
-}
-
-
 /* HEADER */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 header{
     width: 100%;
@@ -30,7 +6,7 @@ header{
     
     background-color: var(--color-Amarillo);
 }
-.container{
+.header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,13 +28,13 @@ header img{
     margin: 10px;
     border-radius: 50%;
 }
-header div.carrito{
+header div.header__carrito{
     width: 40px;
     margin-left: 12px;
     font-size: 1.5rem;
 }
 
-header .container div.user{
+header .header__container div.header__user{
     display: none;
 } 
 
@@ -79,13 +55,13 @@ div.search-bar{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-input.busqueda{
+header div.header-buscador input.busqueda{
     outline: none;
     border-style: none;
     margin-left: 5px;
     width: 100%;
-    height: 1.5rem;
     font-size: var(--paragraphs);
+    font-family: var(--fuente-roboto);
 }
 header div.header-buscador div.search-bar button{
     border-style: none;
@@ -101,22 +77,22 @@ header div.header-buscador div.search-bar button{
     align-items: center;   
 }
 
-nav.nav-bar{
+nav.header__nav{
     display: none;
 }
-nav ul{
+header nav.header__nav ul{
     display: flex;
 }
-li{
+header nav.header__nav li{
     margin: 3px;
     list-style: none;
 }
 
 /* FIN HEADER */
 /* MEDIA QUERIES */
-@media (min-width: 361px){
+@media (min-width: 475px){
     /* HEADER */
-    header .container{
+    header .header__container{
         padding-right: 8px;
     }
 
@@ -137,39 +113,40 @@ li{
         height: 2rem;
 
     }
-    input.busqueda{
+    header div.header-buscador input.busqueda{
         outline: none;
         border-style: none;
         margin-left: 5px;
-        width: 100%;
         height: 2rem;
-        
     }
     header div.header-buscador div.search-bar button{
         width: 2.5rem;
         height: 2rem;  
     }
 
-    header .container div.user{
+    header .header__container div.header__user{
         display: block;
         width: 30px;
         font-size: 1.5rem;
         margin: 0 3px;
         padding-top: 10px;
     } 
+    header .header__container div.header__user i{
+        color: black;
+    }
 
-    header .container div.carrito{
+    header .header__container div.header__carrito{
         position: relative;
         left: 32%;
         top: 5px;
     }
-    header nav.nav-bar{
+    header nav.header__nav{
         display: block;
     }
-    ul.list{
+    header nav.header__nav ul.list{
         display: none;
     }
-    ul{
+    header nav.header__nav ul{
         justify-content: space-evenly;
         align-items: center;  
     }
@@ -199,7 +176,7 @@ li{
 @media (min-width: 769px){
     /* header */
     header img{
-        width: 85px;
+        width: 100px;
         margin: 10px 30px;
         border-radius: 50%;
     }
@@ -211,26 +188,26 @@ li{
         left: 20%;
         width: 50%;
     }
-    header .container div.carrito{
+    header .header__container div.header__carrito{
         position: relative;
         left: 33%;
         top: -6px;
     }
-    header .container div.user{
+    header .header__container div.header__user{
         display: block;
         width: 30px;
         font-size: 1.5rem;
         margin: 0 3px;
         padding-bottom: 22px;
     }
-    header nav ul.list{
+    header nav.header__nav ul.list{
         display: none;
     }
-    header nav ul{
+    header nav.header__nav ul{
         justify-content: space-evenly;
         align-items: center;   
     }
-    header nav ul.top-list li {
+    header nav.header__nav ul.top-list li {
         height: 20px;
         width: 7rem;
         display: flex;

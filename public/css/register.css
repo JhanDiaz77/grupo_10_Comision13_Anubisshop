@@ -1,27 +1,18 @@
-/* Variables */
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
 /* FORM REGISTER */
-section{
+section.register{
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
 }
-h3{
+section.register h3{
     font-family: var(--fuente-roboto);
     font-size: var(--title);
     align-self: center;
     padding: 1rem;
 }
 
-section form.register{
+section.register form.register{
     width: 90%;
     border-radius: 15px;
     border:solid 1px var(--color-VioletaOscuro);    
@@ -32,12 +23,12 @@ section form.register{
     align-items: center;
 }
 
-section div.input-container{
+section.register div.input-container{
     margin-bottom: 1.5rem;
     width: 100%;   
 }
 
-section .input-style{
+section.register .input-style{
     border: solid 1px black;
     outline: none;
     border-radius: 8px;
@@ -48,7 +39,7 @@ section .input-style{
     width: 100%;
     box-shadow: 0px 2px 1px 1px lightgrey;
 } 
-h2{
+section.register form div.input-container h2{
     font-family: var(--fuente-roboto);
     font-size: 1rem;
     color: black;
@@ -83,9 +74,6 @@ div.btn-container, button.submit:hover{
     background-color: var(--color-VioletaOscuro);
     transition: 0.5s;
     width: 100%;  
-}
-i{
-    font-style: normal;   
 }
 
 
