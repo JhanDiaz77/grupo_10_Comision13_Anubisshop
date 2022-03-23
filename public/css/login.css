@@ -1,6 +1,6 @@
 /* INICIO DE FORM LOGIN */
 
-section{
+section.login.login{
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -12,7 +12,7 @@ h3{
     align-self: center;
     padding: 1rem;   
 }
-section form{
+section.login.login form{
     width: 90%;
     border-radius: 15px;
     border:solid 1px var(--color-VioletaOscuro);    
@@ -22,12 +22,12 @@ section form{
     flex-direction: column;
     align-items: center;
 }
-section div.input-container{
+section.login.login div.input-container{
     margin-bottom: 1.5rem;
     width: 100%;   
 }
 
-section .input-style{
+section.login .input-style{
     border: solid 1px black;
     outline: none;
     border-radius: 8px;
@@ -38,7 +38,7 @@ section .input-style{
     width: 100%;
     box-shadow: 0px 2px 1px 1px lightgrey;
 } 
-section form div.input-container h2{
+section.login form div.input-container h2{
     font-family: var(--fuente-roboto);
     font-size: 1rem;
     color: black;
@@ -73,7 +73,7 @@ div.btn-container, button.submit:hover{
     transition: 0.5s;
     width: 100%;  
 }
-section form i{
+section.login form i{
     font-style: normal;   
 }
 /* FIN DE FORM LOGIN */
@@ -82,7 +82,7 @@ section form i{
 @media (min-width: 361px){
 
     /* form */
-    section form{
+    section.login form{
         width: 70%;
         height: 85%;
         border-radius: 15px;
@@ -96,7 +96,7 @@ section form i{
 @media (min-width: 769px){
     
     /* inicio form */
-    section form{
+    section.login form{
         width: 40%;
         height: 85%;
         border-radius: 15px;

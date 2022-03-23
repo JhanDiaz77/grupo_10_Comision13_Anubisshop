@@ -35,12 +35,19 @@ footer nav.footer_nav a{
 /* Media Queries */
 /* Tablet */
 
-@media (min-width: 600px){
+@media (min-width: 700px){
     footer nav.footer_nav ul{
         flex-direction: row;
         width: 100%;
         height: 70px;
+        justify-content: space-evenly;
+
         
     }
+    footer nav.footer_nav{
+        width: 100%;
+      
+    }
+    
 
 }
