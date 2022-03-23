@@ -2,8 +2,8 @@
 @import url(variables.css);
 @import url(header.css);
 @import url(home.css);
-
-
+@import url(productDetail.css);
 @import url(login.css);
 @import url(register.css);
+@import url(productCart.css);
 @import url(footer.css);
