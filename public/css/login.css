@@ -1,10 +1,11 @@
 /* INICIO DE FORM LOGIN */
 
-section.login.login{
+section.login{
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;    
+    align-items: center;
+      
 }
 h3{
     font-family: var(--fuente-roboto);
@@ -12,7 +13,7 @@ h3{
     align-self: center;
     padding: 1rem;   
 }
-section.login.login form{
+section.login form{
     width: 90%;
     border-radius: 15px;
     border:solid 1px var(--color-VioletaOscuro);    
@@ -22,7 +23,7 @@ section.login.login form{
     flex-direction: column;
     align-items: center;
 }
-section.login.login div.input-container{
+section.login div.input-container{
     margin-bottom: 1.5rem;
     width: 100%;   
 }
@@ -79,11 +80,11 @@ section.login form i{
 /* FIN DE FORM LOGIN */
 
 /* MEDIA QUERIES */
-@media (min-width: 361px){
+@media (min-width: 420px){
 
     /* form */
     section.login form{
-        width: 70%;
+        width: 380px;
         height: 85%;
         border-radius: 15px;
         border:solid 1px var(--color-VioletaOscuro);    
@@ -97,7 +98,7 @@ section.login form i{
     
     /* inicio form */
     section.login form{
-        width: 40%;
+        width: 432px;
         height: 85%;
         border-radius: 15px;
         border:solid 1px var(--color-VioletaOscuro);    
