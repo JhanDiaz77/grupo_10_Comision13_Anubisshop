@@ -143,9 +143,7 @@ header nav.header__nav li{
     header nav.header__nav{
         display: block;
     }
-    header nav.header__nav ul.list{
-        display: none;
-    }
+    
     header nav.header__nav ul{
         justify-content: space-evenly;
         align-items: center;  
@@ -200,9 +198,7 @@ header nav.header__nav li{
         margin: 0 3px;
         padding-bottom: 22px;
     }
-    header nav.header__nav ul.list{
-        display: none;
-    }
+    
     header nav.header__nav ul{
         justify-content: space-evenly;
         align-items: center;   
