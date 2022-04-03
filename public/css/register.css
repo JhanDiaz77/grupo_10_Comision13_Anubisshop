@@ -78,10 +78,10 @@ div.btn-container, button.submit:hover{
 
 
 /* MEDIA QUERIES */  
-@media (min-width: 361px){
+@media (min-width: 420px){
    /* INICIO FORM REGISTER */  
-    section form.register{
-        width: 70%;
+    section.register form.register{
+        width: 380px;
         border-radius: 15px;
         border:solid 1px var(--color-VioletaOscuro);    
         padding: 8% 10px;
@@ -95,10 +95,10 @@ div.btn-container, button.submit:hover{
 
 @media (min-width: 769px){
    /* INICIO FORM REGISTRO */
-    section form.register{
-        width: 40%;
+    section.register form.register{
+        width: 432px;
         border-radius: 15px;
-        padding: 8% 10px;
+        padding: 5% 10px;
         margin: 0 1rem 10px 1rem;
     }
 
