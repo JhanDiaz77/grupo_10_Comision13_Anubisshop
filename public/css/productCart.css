@@ -86,6 +86,9 @@ div.carrito section.producto div.producto-pago {
     padding: 1rem 0;
     text-align: end;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 div.carrito section.producto div.producto-pago i {
@@ -103,7 +106,7 @@ div.pago div.costo {
     margin: 1rem;
 }
 
-div.pago div.button {
+div.pago div.button-compra {
     width: 100%;
     position: relative;
     display: flex;
@@ -111,11 +114,11 @@ div.pago div.button {
     align-items: center;
 }
 
-div.pago div.button button{
+div.pago div.button-compra button{
     width: 75%;
     height: 2.5rem;
     border: none;
-    background-color: var(--color-VioletOscuro);
+    background-color: #292BFD;
     color: var(--color-Gris-claro);
     font-size: 24px;
     border-radius: 9px;
@@ -142,11 +145,64 @@ div.pago div.tarjetas div {
     font-size: 25px;
     padding: 2px 0; 
 }
+div.pago div.button-vaciar{
+    padding-left: 0.5rem;
+}
+
+div.pago div.button-vaciar button{
+    width: 50%;
+    height: 2rem;
+    border: none;
+    background-color: red;
+    color: var(--color-Gris-claro);
+    font-size: 20px;
+    border-radius: 9px;
+}
+
+div section.producto-recomendados{
+    padding-top: 0.5rem;
+    /* border: solid 1px black; */
+    width: 100%;
+}
+div section.producto-recomendados div.listado-products-rec{
+    padding-top: 0.5rem;
+    /* border: solid 1px black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div section.producto-recomendados article.producto-rec{
+    position: relative;
+  /*   border: solid 1px black; */
+    padding: 0.5rem 0.3rem;
+    width: 100%;
+    max-width: 500px;
+    
+}
+div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
+    /* border: solid 1px black; */
+    position: relative;
+    width: 100%;
+}
+div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+div section.producto-recomendados article.producto-rec div.detalles-producto div.producto-favorito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2rem 0.4rem;
+}
 
 /* Media querie */
 
 @media (min-width: 730px) {
-    main {
+    main div.contenedor-carrito-pago {
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -208,7 +264,7 @@ div.pago div.tarjetas div {
         padding: 0.2rem;
     }
     
-    div.pago div.button button{
+    div.pago div.button-compra button{
         width: 80%;
         height: 2rem;
         border: none;
@@ -222,4 +278,44 @@ div.pago div.tarjetas div {
     div.pago div.tarjetas {
         margin: 0.5rem 1rem;
     }
+
+    div.pago div.button-vaciar button{
+        width: 70%;
+        height: 2rem;
+        border: none;
+        font-size: 15px;
+    }
+
+    div section.producto-recomendados div.listado-products-rec{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    div section.producto-recomendados article.producto-rec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
+        /* border: solid 1px black; */
+        position: relative;
+        width: 100%;
+        max-height: 165px;
+        height: 165px;
+    }
+
+    div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    div section.producto-recomendados article.producto-rec div.detalles-producto {
+        position: relative;
+        height: auto;
+        
+    }
+
 }
