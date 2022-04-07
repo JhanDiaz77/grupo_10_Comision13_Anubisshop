@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/productDetail.css"> -->
+    <title>Carrito</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Hoja de estilo -->	
+    <!-- <link rel="stylesheet" href="css/productCart.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <!--Font awesowe -->
+       <!--  -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font awesome (iconos) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-
     <header>
         <div class="header__container">
 
@@ -51,55 +55,85 @@
                 
     </header>  
     <main>
-        <div class="detalle-producto">
-            <div class="imagenes">
-                <section class="imagen-principal">
-                    <img src="images/arnes-verde.jpg" alt="">
+        <div class="contenedor-carrito-pago">
+            <div class="carrito">
+                <div class="logo-carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Carrito de compras</p>
+                    <i id="x" class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <hr>
+                <section class="producto">
+                    <div class="producto-img">
+                        <img src="images/img2.jpeg" alt="">
+                    </div>
+                    <div class="producto-name">
+                        <p>Collar para perros grandes 60 cm</p>
+                        <input type="number" name="" id="" placeholder="1">
+                    </div>
+                    <div class="producto-pago"> 
+                        <i class="fa-solid fa-trash-can"></i>
+                        <p>$750,00</p>
+                    </div>
                 </section>
-                <section class="imagen-secundaria">
-                    <img src="images/arnes-fuccia.jpg" alt="">
-                    <img src="images/arnes-lila.jpg" alt="">
-                    <img src="images/arnes-negro.jpg" alt="">
+                <section class="producto">
+                    <div class="producto-img">
+                        <img src="images/img5.jpeg" alt="">
+                    </div>
+                    <div class="producto-name">
+                        <p>Juguete Hueso de Goma Mediano</p>
+                        <input type="number" name="" id="" placeholder="1">
+                    </div>
+                    <div class="producto-pago">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <p>$490,00</p>
+                    </div>
                 </section>
+                <section class="producto">
+                    <div class="producto-img">
+                        <img src="images/img3.jpeg" alt="">
+                    </div>
+                    <div class="producto-name">
+                        <p>Cardina Mediana</p>
+                        <input type="number" name="" id="" placeholder="1">
+                    </div>
+                    <div class="producto-pago">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <p>$650,00</p>
+                    </div>
+                </section>
+                <hr>
             </div>
-            <div class="contenido-text">
-                <section class="detalles">
+            <div class="pago">
+                <div class="costo">
+                    <p>Total</p>
+                    <p>$1.890,00</p>
+                </div>
+                <div class="button-compra">
+                  <button>Iniciar Compra</button>
+                </div>
+                <div class="metodo-pago">
+                    <p>Metodos de pago</p>
                     <div>
-                        <h2>Arnes Pretal Perros Ajustable Julius K9 Importado Baby 1</h2>
+                        <i class="fa-solid fa-credit-card"></i>
+                        <i class="fa-solid fa-money-bill-1-wave"></i>
                     </div>
-                    <br>
-                    <p>Tamaño: Baby 1</p>
-                    <p>Color: Verde Manzana</p>
-                    <p></p>
-                    <p>Cantidad:<input type="number" name="" id="" placeholder="1"></p>
-                    <p>Costo: $7,329.00</p>
-                    <p>Detalles:</p>
-                    <p>JULIUS ARNES PRETAL K-9</p>  
-                    <p>ORIGINAL IMPORTADO</p> 
-                    <p>TALLE BABY 1</p> 
-                    <br>
-                    <p>Recomendados para perros cachorros y pequeños</p> 
-                    <br>
-                    <p>DESCRIPCIÓN:</p> 
-                    <p>-Aspecto Renovado, innovador, deportivo, diseño dinámico.</p> 
-                    <p>-Perfección ergonómica, tamaño ajustados en función de las líneas y Angulaciones de Tiro de cada raza.</p> 
-                    <p>-Transpirable y forro interior hipoalergenico.</p> 
-                    <p>-Etiquetas luminiscentes laterales Julius-K9 Products.</p> 
-                    <p>-Alta Visibilidad, cinta para el pecho reflectante y bordes con pespunte reflectivo.</p> 
-                    <p>-Area de Velcro mas amplia.</p> 
-                    <br>
-                    <p>ESTA PUBLICACIÓN CORRESPONDE AL TALLE BABY 1 - 2</p> 
-                    <br>
-                    <p>-MEDIDAS:</p> 
-                    <br>
-                    <p>TALLE BABY 1: Circunferencia del tórax: 29 - 36 cm</p> 
-                    <p>Peso: 0,8 - 3 kg</p>
-                    <div class="añadir-carrito">
-                        <button>Agregar al carrito</button>
+                </div>
+                <div class="tarjetas">
+                    <p>Tarjetas</p>
+                    <div>
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-apple-pay"></i>
                     </div>
-                </section>
+                </div>
+                <div class="button-vaciar">
+                    <button>Vaciar Carrito</button>
+                </div>
             </div>
         </div>
+        <!-- Productos recomendados  -->
         <div>
             <section class="producto-recomendados">
                 <h3 class="product-title">Productos Recomendados</h3>
@@ -170,23 +204,9 @@
                 
             </section>
         </div>
+
     </main>
-    <footer>
-        <nav class="footer_nav">
-            <ul class="footer-nav">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Contactos</a></li>
-                <li><a href="">Quienes Somos</a></li>
-                
-            </ul>  
-            <ul class="footer-redes">
-                <li><a href="">Twitter <i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="">Facebook <i class="fa-brands fa-facebook"></i></i></a></li>
-                <li><a href="">Instagram <i class="fa-brands fa-instagram"></i></a></li>
-            </ul>              
-        </nav>
-        
-    </footer>
+
+    <%- include('partials/footer')  %> 
 </body>
 </html>
