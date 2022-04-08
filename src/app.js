@@ -3,28 +3,41 @@ const app = express()
 const path = require('path')
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
 
+/* Views config */
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
-/* rutas */
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'))
-})
+/* Enrutadores */
+const indexRouter = require('./routes/indexRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'))
+app.use(express.static(path.join(__dirname, 'public')));
+
+/* Middleware de rutas */
+app.use('/', indexRouter); // HOME - Contact 
+app.use('/productos', productsRouter); // Listado, detalle
+app.use('/usuarios', usersRouter); //Login, registro, perfil
+
+
+
+/* app.use('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '.src/views/home.ejs))}); */
+/* app.use('/',indexRouter) */
+
+/* app.get('/login', (req, res) => {
+    res.render(path.join(__dirname, '.src/views/login.ejs'))
 })
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'))
+    res.render(path.join(__dirname, 'register.ejs'))
 })
 app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productCart.html'))
+    res.sendFile(path.join(__dirname, '.src/views/productCart.ejs'))
 })
 app.get('/detalles', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productDetail.html'))
-})
+    res.sendFile(path.join(__dirname, '..src/views/productDetail.ejs')) 
+}) */
 
 
 
@@ -34,3 +47,5 @@ app.listen(PORT, function() {
     http://localhost:${PORT}
     `)
 })
+
+
