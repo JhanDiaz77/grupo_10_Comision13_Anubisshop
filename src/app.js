@@ -20,24 +20,6 @@ app.use('/', indexRouter)
 app.use('/users', userRouter)
 app.use('/product', productRouter)
 
-/* app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'))
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'))
-})
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'))
-})
-app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productCart.html'))
-})
-app.get('/detalles', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productDetail.html'))
-}) */
-
-
 
 app.listen(PORT, function() {
     console.log(`
