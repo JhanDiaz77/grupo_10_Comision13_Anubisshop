@@ -9,9 +9,9 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
 /* Enrutadores */
-const indexRouter = require('./routers/indexRouter');
-const productsRouter = require('./routers/productsRouter');
-const userRouter = require('./routers/userRouter');
+const indexRouter = require('./routes/indexRouter');
+const productsRouter = require('./routes/productRouter');
+const userRouter = require('./routes/userRouter');
 
 app.use(express.static(path.join(__dirname, '../public')));
 
