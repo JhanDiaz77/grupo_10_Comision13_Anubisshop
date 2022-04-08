@@ -1,55 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/productDetail.css"> -->
-    <link rel="stylesheet" href="css/style.css">
-    <!--Font awesowe -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-</head>
+
+    <%- include('partials/head')  %> 
+
 <body>
 
-    <header>
-        <div class="header__container">
-
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-
-            <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
-
-            <div class="header__carrito"> <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i> </a></div>
-            <div class="header__user"> <a href="/login"><i class="fa-solid fa-user"></i></a></div>
-
-        </div> 
-
-        <div class="header-buscador">
-               
-            <div class="search-bar">
-                <input class="busqueda" type="search" placeholder="Buscar productos, marcas"><button class="lupa">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-
-        </div>          
-                
-            <nav class="header__nav">
-                
-                <ul class="top-list">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Contactos</a></li>
-                    <li><a href="">Quienes Somos</a></li>
-                </ul>
-            </nav>
-                
-    </header>  
+    <%- include('partials/header') %> 
+     
     <main>
         <div class="detalle-producto">
             <div class="imagenes">
