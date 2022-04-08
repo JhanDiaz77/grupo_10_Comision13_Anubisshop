@@ -1,59 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Hoja de estilo -->	
-    <!-- <link rel="stylesheet" href="css/productCart.css"> -->
-    <link rel="stylesheet" href="css/style.css">
-       <!--  -->
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- Font awesome (iconos) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-</head>
+
+    <%- include('partials/head')  %> 
+
 <body>
-    <header>
-        <div class="header__container">
-
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-
-            <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
-
-            <div class="header__carrito"> <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i> </a></div>
-            <div class="header__user"> <a href="/login"><i class="fa-solid fa-user"></i></a></div>
-
-        </div> 
-
-        <div class="header-buscador">
-               
-            <div class="search-bar">
-                <input class="busqueda" type="search" placeholder="Buscar productos, marcas"><button class="lupa">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-
-        </div>          
-                
-            <nav class="header__nav">
-                
-                <ul class="top-list">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Contactos</a></li>
-                    <li><a href="">Quienes Somos</a></li>
-                </ul>
-            </nav>
-                
-    </header>  
+    <%- include('partials/header') %> 
     <main>
         <div class="contenedor-carrito-pago">
             <div class="carrito">
@@ -65,7 +16,7 @@
                 <hr>
                 <section class="producto">
                     <div class="producto-img">
-                        <img src="images/img2.jpeg" alt="">
+                        <img src="/images/img2.jpeg" alt="">
                     </div>
                     <div class="producto-name">
                         <p>Collar para perros grandes 60 cm</p>
@@ -78,7 +29,7 @@
                 </section>
                 <section class="producto">
                     <div class="producto-img">
-                        <img src="images/img5.jpeg" alt="">
+                        <img src="/images/img5.jpeg" alt="">
                     </div>
                     <div class="producto-name">
                         <p>Juguete Hueso de Goma Mediano</p>
@@ -91,7 +42,7 @@
                 </section>
                 <section class="producto">
                     <div class="producto-img">
-                        <img src="images/img3.jpeg" alt="">
+                        <img src="/images/img3.jpeg" alt="">
                     </div>
                     <div class="producto-name">
                         <p>Cardina Mediana</p>
@@ -140,7 +91,7 @@
                 <div class="listado-products-rec">
                     <article class="producto-rec">
                         <div class="imagen-producto-rec">
-                            <img width="100%" src="images/img4.jpeg" alt="Cuerdas de juegos">
+                            <img width="100%" src="/images/img4.jpeg" alt="Cuerdas de juegos">
                         </div>                   
                         <div class="detalles-producto">
                             <div class="producto-favorito">
@@ -155,7 +106,7 @@
                     </article>
                     <article class="producto-rec">
                         <div class="imagen-producto-rec">
-                            <img width="100%" src="images/img6.jpg" alt="Colchón Liso">
+                            <img width="100%" src="/images/img6.jpg" alt="Colchón Liso">
                         </div>
                         <div class="detalles-producto">
                             <div class="producto-favorito">
@@ -171,7 +122,7 @@
                     </article>
                     <article class="producto-rec">
                         <div class="imagen-producto-rec">
-                            <img width="100%" src="images/img7.jpg" alt="Platos de mascotas">
+                            <img width="100%" src="/images/img7.jpg" alt="Platos de mascotas">
                         </div>                    
                         <div class="detalles-producto">
                             <div class="producto-favorito">
@@ -187,7 +138,7 @@
                     </article>
                     <article class="producto-rec">
                         <div class="imagen-producto-rec">
-                            <img width="100%" src="images/img8.jpg" alt="Collares">
+                            <img width="100%" src="/images/img8.jpg" alt="Collares">
                         </div>                   
                         <div class="detalles-producto">
                             <div class="producto-favorito">

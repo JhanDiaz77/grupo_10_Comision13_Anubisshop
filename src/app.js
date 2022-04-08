@@ -21,26 +21,6 @@ app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', userRouter); //Login, registro, perfil
 
 
-
-/* app.use('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '.src/views/home.ejs))}); */
-/* app.use('/',indexRouter) */
-
-/* app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, '.src/views/login.ejs'))
-})
-app.get('/register', (req, res) => {
-    res.render(path.join(__dirname, 'register.ejs'))
-})
-app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, '.src/views/productCart.ejs'))
-})
-app.get('/detalles', (req, res) => {
-    res.sendFile(path.join(__dirname, '..src/views/productDetail.ejs')) 
-}) */
-
-
-
 app.listen(PORT, function() {
     console.log(`
     Servidor escuchando en el puerto ${PORT}

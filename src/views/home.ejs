@@ -1,59 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anubisshop</title>
-    
-    <!-- Googlefonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!--Font awesowe -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
-    <!-- Stylesheets-->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+
+    <%- include('partials/headb')  %> 
+
 <body>
-    <header>
-        <div class="header__container">
-
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-
-            <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
-
-            <div class="header__carrito"> <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i> </a></div>
-            <div class="header__user"> <a href="/login"><i class="fa-solid fa-user"></i></a></div>
-
-        </div> 
-
-        <div class="header-buscador">
-               
-            <div class="search-bar">
-                <input class="busqueda" type="search" placeholder="Buscar productos, marcas"><button class="lupa">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-
-        </div>          
-                
-            <nav class="header__nav">
-                
-                <ul class="top-list">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Contactos</a></li>
-                    <li><a href="">Quienes Somos</a></li>
-                </ul>
-            </nav>
-                
-    </header>    
+    <%- include('partials/header') %>  
     <!-- CARRUSEL -->
     <div class="container_carrusel">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -200,14 +151,15 @@
         </section>
     </section><!--  -->
         <!-- BANNER -->
-    <div class="banner">
+   <!--  <div class="banner">
         <img width="100%" src="images/img6.jpg" alt="">
-    </div>
+    </div> -->
     </main>
     
             
     <%- include('partials/footer')  %> 
-     <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+    <%- include('partials/scripts')  %>
+
     </body>
 </html>

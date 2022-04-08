@@ -12,7 +12,13 @@ _Se asigno las tarjetas de actividades de Trello_
 
 * ** _Por problemas de conectividad no se logro hacer_
 
+### Daily 6/4 🔩
 
+_Se reviso los avances del Sprint 3_
+
+_Se implemento los cambios sugeridos_
+
+_Se reasignaros las tarjetas en trello_
 
 
 
