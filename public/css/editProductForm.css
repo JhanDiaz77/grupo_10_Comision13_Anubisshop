@@ -57,7 +57,7 @@ form.form_editProduct select.category{
 
 div.btn-editForm,
 
-button.submit{
+button.edit-submit{
     color: white;
     border: none;
     outline: none;
@@ -73,7 +73,7 @@ button.submit{
     box-shadow: 0px 2px 1px 1px lightgrey;
 }
 
-button.submit:hover{
+button.edit-submit:hover{
     background-color: var(--color-VioletaOscuro);
     transition: 0.5s;
 }
@@ -103,7 +103,7 @@ button.reset:hover{
     }
     div.btn-editForm,
 
-button.submit{
+    button.edit-submit{
     width: 171px;    
     }
 
