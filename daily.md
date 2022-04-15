@@ -20,6 +20,21 @@ _Se implemento los cambios sugeridos_
 
 _Se reasignaros las tarjetas en trello_
 
+### Daily 10/4 🔩
+
+_Se realizaron las sugerencias dejada por Mati en Trello_
+
+_Sebastian realizo el desplegar del button_
+
+### Daily 14/4 🔩
+
+* ** _Por problemas de conectividad no se logro hacer_
+
+
+
+
+
+
 
 
 
