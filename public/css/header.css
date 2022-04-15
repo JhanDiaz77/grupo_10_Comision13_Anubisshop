@@ -13,7 +13,7 @@ header{
 }
 .burger-menu button.menu-button{
     background-color: var(--color-VioletaClaro);
-    color: black;
+    color: white;
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -21,6 +21,7 @@ header{
     align-items: center;
     justify-content: center;
     margin: 10px;
+    border-style: none;
 }
  
 header img{
@@ -257,6 +258,9 @@ header .header_nav-burger.active {
         max-width: 100%;
         font-size: 16px;
         font-weight: normal;
+    }
+    header nav.header__nav li a{
+        color: white;
     }
 
     ul.top-list li {
