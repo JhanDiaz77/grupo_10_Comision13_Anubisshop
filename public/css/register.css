@@ -76,6 +76,36 @@ div.btn-container, button.submit:hover{
     width: 100%;  
 }
 
+/* ********AVATAR********** */
+
+div.input-avatarcontainer{
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+}
+
+div.input-avatarcontainer h4{
+    text-align: center;
+    background-color: lightgrey; 
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 50%;
+    position: relative;
+    left: 32px;
+    
+}
+
+div.input-avatarcontainer input.form__image{
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+div.input-avatarcontainer h4 i{
+    font-size: 4rem;
+    color: darkgrey;
+}
+/* *******END AVATAR**********/
+
 
 /* MEDIA QUERIES */  
 @media (min-width: 420px){
