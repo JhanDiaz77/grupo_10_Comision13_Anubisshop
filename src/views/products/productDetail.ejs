@@ -11,7 +11,7 @@
         <div class="detalle-producto">
             <div class="imagenes">
                 <section class="imagen-principal">
-                    <img src="/images/arnes-verde.jpg" alt="">
+                    <img src="/images/<%= product.image %>" alt="">
                 </section>
                 <section class="imagen-secundaria">
                     <img src="/images/arnes-fuccia.jpg" alt="">
@@ -22,37 +22,22 @@
             <div class="contenido-text">
                 <section class="detalles">
                     <div>
-                        <h2>Arnes Pretal Perros Ajustable Julius K9 Importado Baby 1</h2>
+                        <h2><%= product.name %></h2>
                     </div>
                     <br>
                     <p>Tamaño: Baby 1</p>
                     <p>Color: Verde Manzana</p>
                     <p></p>
-                    <p>Cantidad:<input type="number" name="" id="" placeholder="1"></p>
-                    <p>Costo: $7,329.00</p>
-                    <p>Detalles:</p>
-                    <p>JULIUS ARNES PRETAL K-9</p>  
-                    <p>ORIGINAL IMPORTADO</p> 
-                    <p>TALLE BABY 1</p> 
-                    <br>
-                    <p>Recomendados para perros cachorros y pequeños</p> 
-                    <br>
-                    <p>DESCRIPCIÓN:</p> 
-                    <p>-Aspecto Renovado, innovador, deportivo, diseño dinámico.</p> 
-                    <p>-Perfección ergonómica, tamaño ajustados en función de las líneas y Angulaciones de Tiro de cada raza.</p> 
-                    <p>-Transpirable y forro interior hipoalergenico.</p> 
-                    <p>-Etiquetas luminiscentes laterales Julius-K9 Products.</p> 
-                    <p>-Alta Visibilidad, cinta para el pecho reflectante y bordes con pespunte reflectivo.</p> 
-                    <p>-Area de Velcro mas amplia.</p> 
-                    <br>
-                    <p>ESTA PUBLICACIÓN CORRESPONDE AL TALLE BABY 1 - 2</p> 
-                    <br>
-                    <p>-MEDIDAS:</p> 
-                    <br>
-                    <p>TALLE BABY 1: Circunferencia del tórax: 29 - 36 cm</p> 
-                    <p>Peso: 0,8 - 3 kg</p>
+                    <p>Cantidad: 1</p>
+                    <p>Costo: $<%= product.price %></p>
+                    <p>DESCRIPCIÓN:<%= product.description %></p> 
+                    
                     <div class="añadir-carrito">
-                        <button>Agregar al carrito</button>
+                            <button>Agregar al carrito</button>
+                            <a href="/productos/edit/<%= product.id %>"><button>Editar Producto</button></a>
+                            <form action="/productos/<%= product.id %>?_method=DELETE" method="POST">
+                                <button type="submit">Eliminar</button>
+                            </form>
                     </div>
                 </section>
             </div>

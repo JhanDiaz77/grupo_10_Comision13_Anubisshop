@@ -61,7 +61,7 @@ main div.detalle-producto div.contenido-text section.detalles p input {
 main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     margin: 0.5rem 0;
 }
@@ -69,7 +69,7 @@ main div.detalle-producto div.contenido-text section.detalles div.añadir-carrit
 main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito button {
     border-radius: 15px;
     padding: 0.2rem;
-    width: 60%;
+    width: 10rem;
     height: 2.5rem;
     background-color: #292BFD;
     color: white;
@@ -87,7 +87,7 @@ main div.detalle-producto div.contenido-text section.detalles div.añadir-carrit
     }
 
     main div.detalle-producto div.imagenes section.imagen-secundaria {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-evenly;
         

@@ -10,15 +10,15 @@
     <section class="editProductSection">
         <h3>Editar Producto</h3>
 
-        <form action="" method=""  class="form_editProduct">
+        <form action="/productos/<%= product.id %>?_method=PUT" method="POST" class="form_editProduct">
             <div class="input-container">
-                <label for="mail"><h2>Nombre del producto</h2></label>
-                <input type="text" class="input-style" placeholder="Nombre del producto" id="mail">
+                <label for="name"><h2>Nombre del producto</h2></label>
+                <input type="text" class="input-style" placeholder="ejm: zapas" id="name" name="name" value="<%= product.name %>">
             </div>
             
             <div class="input-container">
-                <label for="categoria"><h2>Categoría</h2></label>
-                <select name="categoria" id="categoria" class="category">
+                <label for="categoryId"><h2>Categoria</h2></label>
+                <select name="categoryId" id="categoryId" class="category">
                     <option value="">Juguetes</option>
                     <option value="">Accesorios</option>
                     <option value="">Almohadones, camas</option>
@@ -31,12 +31,12 @@
                 <input type="file" class="form_image" placeholder="Seleccione un archivo" id="image">
             </div>
             <div class="input-container">
-                <label for="precio"><h2>Precio</h2></label>
-                <input type="number" class="input-style" value="300" id="precio">
+                <label for="price"><h2>Precio</h2></label>
+                <input type="text" class="input-style" value="<%= product.price %>" id="price" name="price">
             </div>
             <div class="input-container">
                 <label for="description"><h2>Descripción</h2></label>
-                <textarea name="description" class="input-style" id="description" cols="30" rows="10"></textarea>
+                <textarea name="description" class="input-style" id="description" cols="30" rows="10"><%= product.description %></textarea>
             </div>
             <div class="btn-editForm">
                 <button class="edit-submit" type="submit">Editar</button>

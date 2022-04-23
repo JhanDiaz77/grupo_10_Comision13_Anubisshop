@@ -4,9 +4,37 @@
 <body>
   <%- include('../partials/header') %> 
   
-      <main>
-        
-      </main>
+  <main>
+    <section class="section-main">   
+        <h2>Listado de Productos</h2>
+        <section class="section-ofertas">
+            <div class="product-final">
+              <% products.forEach( product => { %>
+                <article class="article-final">
+                  <a href="/productos/detail/<%- product.id %>">
+                    <div class="cont-imagen">
+                        <img src="images/<%- product.image %>" alt="ARNES">
+                    </div>
+                    <div class="detail-product">
+                        <h3><%- product.name %></h3>
+                        <p class="price-product">$<%- product.price %></p>
+                        <p>Producto 100% Argentino</p>
+                    </div>
+                    <div class="boton-press">
+                        <div class="boton-one">
+                            <button type="submit"><i class="fas fa-truck"></i>
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                </article>
+              <% }) %>
+            </div>
+        </section>
+    </section>
+    
+    </main>
 
       <%- include('../partials/footer') %> 
       

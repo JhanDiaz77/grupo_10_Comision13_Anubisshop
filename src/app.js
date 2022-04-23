@@ -2,6 +2,7 @@ const express = require ('express')
 const app = express()
 const path = require('path')
 const PORT = 3000;
+const methodOverride =  require('method-override'); 
 
 
 /* Views config */
@@ -14,6 +15,9 @@ const productsRouter = require('./routes/productRouter');
 const userRouter = require('./routes/userRouter');
 
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 /* Middleware de rutas */
 app.use('/', indexRouter); // HOME - Contact 
