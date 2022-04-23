@@ -30,8 +30,29 @@ _Sebastian realizo el desplegar del button_
 
 * ** _Por problemas de conectividad no se logro hacer_
 
+### Daily 16/4 🔩
 
+* **Se hizo:
 
+ _Se realizo los cambio propuestos_
+
+### Daily 19/4 🔩
+
+* **Se hizo:
+
+_Se reviso los avances del Sprint 4_
+
+_Se asigno las tarjetas de actividades de Trello_
+
+### Daily 21/4 🔩
+
+* **Se hizo:
+
+_Se reviso los avances del Sprint 4_
+
+_Se hicieron las actividades completas_
+
+_Se hicieron las actividades completas_
 
 
 

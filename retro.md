@@ -98,6 +98,8 @@ _Estresarnos._
 
 * **Empezar a hacer:
 
+_Buscar funcionalidades nuevas para la pagina._
+
 _Trabajar en ramas paralelas al master con GIT_ 
 
 * **Dejar de hacer:
