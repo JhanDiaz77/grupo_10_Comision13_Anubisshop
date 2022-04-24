@@ -67,13 +67,14 @@ main div.detalle-producto div.contenido-text section.detalles div.añadir-carrit
 }
 
 main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito button {
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 0.2rem;
     width: 10rem;
     height: 2.5rem;
     background-color: #292BFD;
     color: white;
     font-size: 15px;
+    border-style: none;
 }
 
 

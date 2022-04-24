@@ -283,6 +283,10 @@ header .header_nav-burger.active {
         text-decoration: none;
         text-align: center;
     }
+    ul.top-list a:hover{
+        background-color: var(--color-VioletaOscuro);
+        transition: all 0.3s ease-in;
+    }
 
     header nav.header__nav .end-nav {
         display: none;
