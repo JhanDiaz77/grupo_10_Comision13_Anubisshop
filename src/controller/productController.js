@@ -92,6 +92,10 @@ module.exports = {
           writeProducts(products)
 
           res.send('Eliminaste el producto')
+    },
+
+    productCart: (req,res) => {
+         res.render('products/productCart')
     }
     
 }

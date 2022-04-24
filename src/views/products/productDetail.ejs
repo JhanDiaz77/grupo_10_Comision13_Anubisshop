@@ -30,6 +30,11 @@
                     <p></p>
                     <p>Cantidad: 1</p>
                     <p>Costo: $<%= product.price %></p>
+                    <% if (product.discount > 0) { %>
+                        <p> Descuento: Ahora a <span> $<%= product.price - product.discount * product.price / 100 %></span></p>
+                      <% } else { %>
+                        <p> Sin Descuento</p>
+                      <% } %>
                     <p>DESCRIPCIÓN:<%= product.description %></p> 
                     
                     <div class="añadir-carrito">

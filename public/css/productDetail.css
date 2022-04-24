@@ -52,6 +52,10 @@ main div.detalle-producto div.contenido-text section.detalles p {
     text-align: left;
     font-size: var(--discounts-descriptions);
 }
+main div.detalle-producto div.contenido-text section.detalles span {
+    color: red;
+    font-size: 1.3rem;
+}
 
 main div.detalle-producto div.contenido-text section.detalles p input {
     width: 1.5rem;

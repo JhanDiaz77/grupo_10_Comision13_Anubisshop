@@ -50,7 +50,11 @@
                         <div class="detail-product">
                             <h3><%- product.name %></h3>
                             <p class="price-product">$<%- product.price %></p>
-                            <p>Producto 100% Argentino</p>
+                              <% if (product.discount > 0) { %>
+                                  <p> Ahora a <span> $<%= product.price - product.discount * product.price / 100 %></span></p>
+                              <% } else { %>
+                                  $ <%= product.price %> 
+                              <% } %>
                         </div>
                         <div class="boton-press">
                             <div class="boton-one">
@@ -78,7 +82,11 @@
                         <div class="detail-product">
                             <h3><%- product.name %></h3>
                             <p class="price-product">$<%- product.price %></p>
-                            <p>Producto 100% Argentino</p>
+                            <% if (product.discount > 0) { %>
+                              <p> Ahora a <span> $<%= product.price - product.discount * product.price / 100 %></span></p>
+                            <% } else { %>
+                              Producto 100% Argentino 
+                            <% } %>
                         </div>
                         <div class="boton-press">
                             <div class="boton-one">

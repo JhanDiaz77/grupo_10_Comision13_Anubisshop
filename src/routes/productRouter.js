@@ -20,5 +20,8 @@ router.get('/detail/:id', productController.detail);
 /* Eliminar producto */
 router.delete('/:id', productController.delete)
 
+/* Carrito de productos */
+router.get('/cart', productController.productCart);
+
 
 module.exports = router;

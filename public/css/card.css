@@ -86,6 +86,11 @@ main div.product-final div.detail-product p {
     margin: 0.2rem 0.3rem;
 }
 
+main div.product-final div.detail-product p span {
+    color: red;
+    font-size: 1.3rem;
+}
+
 main div.product-final div.boton-press {
    /*  border: solid 1px black; */
     margin: 0;
