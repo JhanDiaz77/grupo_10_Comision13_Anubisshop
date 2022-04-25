@@ -117,6 +117,13 @@ main div.product-final div.boton-press div.boton-one button{
     align-items: center;
 }
 
+.product-final .card__priceSale--original {
+    color: tomato;
+    font-size: 24px;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
 @media (min-width: 550px){
     main div.product-final {
         display: flex;
