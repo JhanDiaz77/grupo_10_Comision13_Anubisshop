@@ -14,6 +14,7 @@ const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productRouter');
 const userRouter = require('./routes/userRouter');
 
+/* Middlewares de aplicación */
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
