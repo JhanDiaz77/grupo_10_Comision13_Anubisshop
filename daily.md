@@ -52,7 +52,22 @@ _Se reviso los avances del Sprint 4_
 
 _Se hicieron las actividades completas_
 
-_Se hicieron las actividades completas_
+
+### Daily 23/4 🔩
+
+_Se reviso los avances del Sprint 4_
+
+_Se hicieron las actividades completamentarias_
+
+### Daily 27/4 🔩
+
+_Se mostro los avances del footer_
+
+### Daily 30/4 🔩
+
+_Se hizo la distribuccion del trabajo para el sprint 5_
+
+
 
 
 
