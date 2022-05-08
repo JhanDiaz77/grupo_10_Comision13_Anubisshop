@@ -67,6 +67,16 @@ _Se mostro los avances del footer_
 
 _Se hizo la distribuccion del trabajo para el sprint 5_
 
+### Daily 03/5 🔩
+
+_Se actualizo el trello_
+
+_Se novedades del sprint 5_
+
+### Daily 05/5 🔩
+
+_Se informo sobre las novedades del sprint 5_
+
 
 
 

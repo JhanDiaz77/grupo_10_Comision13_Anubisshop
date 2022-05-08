@@ -15,6 +15,8 @@ let validateRegister = [
         }
         return true;
     }).withMessage("Email ya registrado"),
+    check("phone")
+    .notEmpty().withMessage("Ingrese un número teléfonico"),
     check("password")
         .notEmpty().withMessage("Ingrese una contraseña")
         .isLength({min: 8}).withMessage("La contraseña debe tener por lo menos 8 caracteres"), 

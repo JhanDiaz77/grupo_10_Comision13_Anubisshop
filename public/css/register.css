@@ -39,6 +39,9 @@ section.register .input-style{
     width: 100%;
     box-shadow: 0px 2px 1px 1px lightgrey;
 } 
+section.register .imput-style{
+    color: red
+} 
 section.register form div.input-container h2{
     font-family: var(--fuente-roboto);
     font-size: 1rem;

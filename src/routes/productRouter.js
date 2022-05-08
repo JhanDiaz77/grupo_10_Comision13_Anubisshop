@@ -12,7 +12,7 @@ router.post('/', uploadFile.single('image'), productController.addProduct);  */
 
 /* Edicion de productos */
 router.get('/edit/:id', productController.edit);
-router.put('/:id', productController.addEdit); 
+router.put('/:id', uploadFile.single('image'), productController.addEdit); 
 
 /* Detalle de productos */
 router.get('/detail/:id', productController.detail);
