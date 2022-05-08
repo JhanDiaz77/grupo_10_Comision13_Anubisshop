@@ -6,9 +6,9 @@ const uploadFile = require('../middlewares/uploadProducts');
 /* Todos los productos */
 router.get('/', productController.index);
 
-/* Creacion de productos */
+/* Creacion de productos
 router.get('/create', productController.create);
-router.post('/', uploadFile.single('image'), productController.addProduct); 
+router.post('/', uploadFile.single('image'), productController.addProduct);  */
 
 /* Edicion de productos */
 router.get('/edit/:id', productController.edit);

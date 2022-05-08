@@ -13,6 +13,7 @@ app.set('views', path.join(__dirname, 'views'))
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productRouter');
 const userRouter = require('./routes/userRouter');
+const adminRouter = require('./routes/adminRouter');
 
 /* Middlewares de aplicación */
 app.use(express.static(path.join(__dirname, '../public')));
@@ -24,7 +25,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter); // HOME - Contact 
 app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', userRouter); //Login, registro, perfil
-
+app.use('/admin', adminRouter); //Admin, ABM Productos
 
 app.listen(PORT, function() {
     console.log(`

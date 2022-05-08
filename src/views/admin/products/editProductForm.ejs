@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/headb')  %> 
+
+<body>
+    <%- include('../partials/header') %>  
+
+
+    <section class="editProductSection">
+        <h3>Editar Producto</h3>
+
+        <form action="/admin/list/editar/<%= producto.id %>?_method=PUT" method="POST"  class="form_editProduct" enctype="multipart/form-data">
+            <div class="input-container">
+                <label for="name"><h2>Nombre del producto</h2></label>
+                <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name">
+            </div>
+            
+            <div class="input-container">
+                <label for="categoria"><h2>Categoría</h2></label>
+                <select name="categoryId" id="categoria" class="category">
+                    <option value="1">Juguetes</option>
+                    <option value="2">Accesorios</option>
+                    <option value="3">Almohadones, camas</option>
+                    <option value="4">Alimentos</option>
+                    <option value="5">Higiene</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="image"><h2>Imagen</h2></label>
+                <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image">
+            </div>
+            <div class="input-container">
+                <label for="precio"><h2>Precio</h2></label>
+                <input type="number" name="price" class="input-style" value="300" id="precio">
+            </div>
+            <div class="input-container">
+                <label for="description"><h2>Descripción</h2></label>
+                <textarea name="description" class="input-style" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btn-editForm">
+                <button class="edit-submit" type="submit">Editar</button>
+                <button class="reset" type="reset">Limpiar</button>
+            </div> 
+            
+
+        </form>
+    </section>
+    <%- include('../partials/footer')%> 
+    <%- include('../partials/scripts')  %>
+</body>
+</html>
