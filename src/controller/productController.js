@@ -13,9 +13,9 @@ module.exports = {
      })
     },
 
-    create: (req,res)  => {
+   /*  create: (req,res)  => {
      res.render('admin/addProductForm')
-    },
+    }, */
     
     detail: (req,res)  => {
           let productId = +req.params.id;
@@ -25,7 +25,7 @@ module.exports = {
                product,
           })
      },
-    
+    /* 
     addProduct: (req ,res)  => {
           let lastId = 0;
           products.forEach(product => {
@@ -47,10 +47,11 @@ module.exports = {
 		res.send('El producto a sido creado exitosamente.')
 		
 
-    },
+    }, */
 
     edit: (req,res)  => {
           let productId = +req.params.id;
+
           let product = products.find(product => product.id === productId);
 
           res.render('admin/editProductForm', {

@@ -7,7 +7,7 @@ section.login{
     align-items: center;
       
 }
-h3{
+section.login h3{
     font-family: var(--fuente-roboto);
     font-size: var(--title);
     align-self: center;
