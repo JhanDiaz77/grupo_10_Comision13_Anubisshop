@@ -6,21 +6,38 @@
 <body>
     <%- include('../partials/header') %> 
    
-    <section class="login">      <!-- <main> -->
+    <section class="login">     
+        
+        <!-- <main> -->
 
         <h3>Login</h3>
             
-            <form action="" method="">
+            <form action="/usuarios/login" method="POST">
                     
                     <div class="input-container">
-                        <label for="mail"><h2>E-mail</h2></label>
-                        <input type="text" class="input-style" placeholder="Ingrese su E-mail" id="mail" required>
+                        <label for="email"><h2>E-mail</h2></label>
+                        <input type="email" name="email" class="input-style" placeholder="Ingrese su E-mail" id="email" >
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text-danger"><%= errors.email.msg %></small>
+                        <% } %>
                     </div>
                     
                     <div class="input-container">
-                        <label for="pass"><h2>Contraseña</h2></label>
-                        <input type="password" class="input-style" placeholder="Ingrese su contraseña" id="pass" required>
+                        <label for="password"><h2>Contraseña</h2></label>
+                        <input type="password" name="password" class="input-style" placeholder="Ingrese su contraseña" id="password" >
+                        <% if (locals.errors && errors.password) { %>
+                            <small class="text-danger"><%= errors.password.msg %></small>
+                        <% } %>
                     </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" name="remember" type="checkbox" id="remember">
+                        <label class="form-check-label" for="remember">
+                            Recordarme
+                        </label>
+                    </div>
+                    <% if (locals.errors && errors.custom) { %>
+                        <small class="text-danger"><%= errors.custom.msg %></small>
+                    <% } %>
                     <div class="contraseña">
                         <a href="">¿Olvidaste tu contraseña?</a>
                     </div>
@@ -31,7 +48,9 @@
                     <i>¿No tienes una cuenta? <a href="register">Crear cuenta</a></i> 
 
             </form>
-    </section>       <!--  </main> -->
+    </section>      
+    
+    <!--  </main> -->
 
     <%- include('../partials/footer')  %> 
     <%- include('../partials/scripts')  %>

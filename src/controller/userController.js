@@ -1,9 +1,49 @@
-const{getUsers, writeUsers } = require('../data')
-const { validationResult} = require('express-validator')
+const{ getUsers, writeUsers, users } = require('../data')
+const { validationResult } = require('express-validator')
 
 module.exports = {
     login: (req,res)  => {
-         res.render('users/login')
+         res.render('users/login', {
+          titulo: "Login",
+          css: "login.css",
+          session: req.session
+      })
+    },
+
+    processLogin: (req,res)  => {
+     let errors = validationResult(req);
+     if(errors.isEmpty()){
+         let user = users.find(user => user.email === req.body.email);
+
+         req.session.user = {
+             id: user.id,
+             name: user.name,
+            /*  avatar: user.avatar, */
+             email: user.email
+             /* rol: user.rol */
+         }
+
+         if(req.body.remember){
+             const TIME_IN_MILISECONDS = 60000;
+             res.cookie('formarCookie', req.session.user, {
+                 expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                 httpOnly: true,
+                 secure: true
+             })
+         }
+
+         res.locals.user = req.session.user
+
+         res.redirect('/')
+     }else{
+         
+         res.render('users/login', {
+             titulo: "Login",
+             css: "userForms.css",
+             errors: errors.mapped(),
+             session: req.session
+         })
+     }
     },
 
     register: (req,res)  => {
