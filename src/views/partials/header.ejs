@@ -19,9 +19,13 @@
     <div class="header-buscador">
            
         <div class="search-bar">
-            <input class="busqueda" type="search" placeholder="Buscar productos, marcas"><button class="lupa">
-                <i class="fas fa-search"></i>
-            </button>
+            <form class="search-bar-barra" action="/search" method="GET">
+                <input class="busqueda" type="text" name="keywords" placeholder="Buscar productos, marcas">
+                <button type="submit" class="lupa">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+            </form>
         </div>
 
     </div>    

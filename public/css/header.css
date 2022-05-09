@@ -56,14 +56,25 @@ div.search-bar{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+form.search-bar-barra {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
 header div.header-buscador input.busqueda{
     outline: none;
     border-style: none;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     width: 100%;
     font-size: var(--paragraphs);
     font-family: var(--fuente-roboto);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
 header div.header-buscador div.search-bar button{
     border-style: none;
     background-color: black;
@@ -75,7 +86,11 @@ header div.header-buscador div.search-bar button{
     border-bottom-right-radius: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+    flex-direction: row;  
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 div.header_nav-burger {
@@ -201,7 +216,7 @@ header .header_nav-burger.active {
     header div.header-buscador input.busqueda{
         outline: none;
         border-style: none;
-        margin-left: 5px;
+       /*  margin-left: 5px; */
         height: 2.3rem;
         font-size: 15px;
     }
