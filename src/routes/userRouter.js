@@ -12,7 +12,7 @@ router.get('/login', userInSession ,userController.login);
 router.post('/login', loginValidator, userController.processLogin);
 
 router.get('/register', userInSession ,userController.register);
-router.post('/register', upload.single('avatar') ,userController.processRegister)
+router.post('/register', upload.single('avatar'), registerValidator ,userController.processRegister)
 
 router.get('/logout', userController.logout);
 

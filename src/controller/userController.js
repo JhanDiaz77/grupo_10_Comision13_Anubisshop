@@ -16,7 +16,7 @@ module.exports = {
             let user = users.find(user => user.email === req.body.email);
 
             req.session.user = {
-                 id: user.id,
+                id: user.id,
                 name: user.name,
                 /*  avatar: user.avatar, */
                 email: user.email,
@@ -86,48 +86,12 @@ module.exports = {
 
         }else{
 
-            res.render('usuarios/register', {
+            res.render('users/register', {
                 titulo: "Registro",
                 errors: errors.mapped(),
                 session: req.session
             })
         }
-
-       /*  let errors = validationResult(req);
-      
-        if(errors.isEmpty()){
-         
-         let lastId = 0;
-            getUsers.forEach(user => {
-              if(user.id > lastId){
-                   lastId = user.id
-              }
-              
-         });
-
-         let newUser = {
-              id: lastId +1,
-              name: req.body.name,
-              email: req.body.email,
-              password: req.body.password,
-              avatar: req.file ? req.file.filename : ""
-
-         }
-
-         getUsers.push(newUser)
-
-         writeUsers(getUsers)
-         
-         res.redirect('/usuarios/login')
-     
-     }else{
-         
-          res.render('users/register', {
-              titulo: "Registro",
-              errors: errors.mapped(),
-              session: req.session
-          })
-     } */
 
               
     },

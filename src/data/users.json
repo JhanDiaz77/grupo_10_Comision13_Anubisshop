@@ -10,43 +10,43 @@
         "id": 1,
         "name": "Jhan Diaz",
         "email": "jhan@mail.com",
-        "telefono": "1111111111",
+        "phone": "1111111111",
         "password": "123",
         "avatar": "",
-        "rol":"admin"
+        "rol": "admin"
     },
     {
         "id": 2,
         "name": "Sebastian",
         "email": "sebastian@mail.com",
-        "telefono": "1212121212",
+        "phone": "1212121212",
         "password": "1234",
         "avatar": "",
-        "rol":"admin"
+        "rol": "admin"
     },
     {
         "id": 3,
         "name": "Selena",
         "email": "selena@mail.com",
-        "telefono": "1313131313",
+        "phone": "1313131313",
         "password": "12345",
         "avatar": "",
-        "rol":"admin"
+        "rol": "admin"
     },
     {
         "id": 4,
         "name": "Juan",
         "email": "juan@mail.com",
-        "telefono": "1414141414",
+        "phone": "1414141414",
         "password": "1234",
         "avatar": "",
-        "rol":"user"
+        "rol": "user"
     },
     {
         "id": 5,
         "name": "Carlos",
         "email": "carlos@mail.com",
-        "telefono": "1515151515",
+        "phone": "1515151515",
         "password": "1234567",
         "avatar": ""
     },
@@ -54,7 +54,7 @@
         "id": 6,
         "name": "Florencia",
         "email": "florencia@mail.com",
-        "telefono": "1616161616",
+        "phone": "1616161616",
         "password": "12345678",
         "avatar": ""
     },
@@ -62,7 +62,7 @@
         "id": 7,
         "name": "Matias",
         "email": "matias@mail.com",
-        "telefono": "1717171717",
+        "phone": "1717171717",
         "password": "12345",
         "avatar": ""
     },
@@ -70,7 +70,7 @@
         "id": 8,
         "name": "Victoria",
         "email": "victoria@mail.com",
-        "telefono": "1818181818",
+        "phone": "1818181818",
         "password": "123456",
         "avatar": ""
     },
@@ -78,7 +78,7 @@
         "id": 9,
         "name": "Jonatan",
         "email": "jonatana@mail.com",
-        "telefono": "1919191919",
+        "phone": "1919191919",
         "password": "1234567",
         "avatar": ""
     },
@@ -86,7 +86,7 @@
         "id": 10,
         "name": "Ailen",
         "email": "ailen@mail.com",
-        "telefono": "202020202",
+        "phone": "202020202",
         "password": "12345678",
         "avatar": ""
     },
@@ -94,7 +94,7 @@
         "id": 11,
         "name": "Santiago",
         "email": "Santiago@mail.com",
-        "telefono": "2121212121",
+        "phone": "2121212121",
         "password": "12345",
         "avatar": ""
     },
@@ -102,7 +102,7 @@
         "id": 12,
         "name": "Jose",
         "email": "jose@mail.com",
-        "telefono": "222222222",
+        "phone": "222222222",
         "password": "123456",
         "avatar": ""
     },
@@ -110,7 +110,7 @@
         "id": 13,
         "name": "Maria",
         "email": "maria@mail.com",
-        "telefono": "2323232323",
+        "phone": "2323232323",
         "password": "1234567",
         "avatar": ""
     },
@@ -118,7 +118,7 @@
         "id": 14,
         "name": "Francisco",
         "email": "francisco@mail.com",
-        "telefono": "2424242424",
+        "phone": "2424242424",
         "password": "12345378",
         "avatar": ""
     },
@@ -126,7 +126,7 @@
         "id": 15,
         "name": "Ana",
         "email": "ana@mail.com",
-        "telefono": "2525252525",
+        "phone": "2525252525",
         "password": "12345",
         "avatar": ""
     },
@@ -134,7 +134,7 @@
         "id": 16,
         "name": "Mateo",
         "email": "mateo@mail.com",
-        "telefono": "2626262626",
+        "phone": "2626262626",
         "password": "123456",
         "avatar": ""
     },
@@ -142,7 +142,7 @@
         "id": 17,
         "name": "Gabriela",
         "email": "gabriela@mail.com",
-        "telefono": "2727272727",
+        "phone": "2727272727",
         "password": "1234567",
         "avatar": ""
     },
@@ -150,7 +150,7 @@
         "id": 18,
         "name": "Federico",
         "email": "federico@mail.com",
-        "telefono": "2828282828",
+        "phone": "2828282828",
         "password": "12345678",
         "avatar": ""
     },
@@ -158,7 +158,7 @@
         "id": 19,
         "name": "Paula",
         "email": "paula@mail.com",
-        "telefono": "2929292929",
+        "phone": "2929292929",
         "password": "12345",
         "avatar": ""
     },
@@ -166,8 +166,16 @@
         "id": 20,
         "name": "Clara",
         "email": "clara@mail.com",
-        "telefono": "3030303030",
+        "phone": "3030303030",
         "password": "123456",
         "avatar": ""
+    },
+    {
+        "id": 21,
+        "name": "pepin",
+        "email": "pepin@mail.com",
+        "password": "11223344",
+        "avatar": "",
+        "rol": "user"
     }
 ]
