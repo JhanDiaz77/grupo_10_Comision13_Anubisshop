@@ -12,8 +12,12 @@ const controller = {
 		let productsOferta = products.filter(product => product.promo === "oferta");
 
         res.render('home' , {
+			titulo: "Homepage",
+            products,
+            session: req.session,
 			productsDestacado,
 			productsOferta
+
 		})
     },
     search: (req,res)  => {
@@ -29,6 +33,8 @@ const controller = {
 		res.render('result', {
 			searchResult,
 			keyword: req.query.keywords,
+            products,
+            session: req.session,
 		});
     }
     

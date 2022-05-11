@@ -10,6 +10,7 @@ module.exports = {
     index: (req,res)  => {
      res.render('products/listProducts', {
           products,
+          session: req.session,
      })
     },
 
@@ -23,6 +24,7 @@ module.exports = {
 
           res.render('products/productDetail', {
                product,
+               session: req.session,
           })
      },
     /* 
@@ -96,7 +98,9 @@ module.exports = {
     },
 
     productCart: (req,res) => {
-         res.render('products/productCart')
+         res.render('products/productCart', {
+               session: req.session,
+          })
     }
     
 }

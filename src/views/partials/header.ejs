@@ -41,6 +41,14 @@
                 <li><a href="/productos">Productos</a></li>
                 <li><a href="">Contactos</a></li>
                 <li><a href="">Quienes Somos</a></li>
+                <% if (typeof session.user != "undefined") { %>
+                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                    <li><a href="/usuarios/logout">Cerrar sesión</a></li>
+                    <% if (session.user.rol === "admin") { %>
+                        <li><a href="/admin">Admin</a></li>
+                    <% } %>
+                <% } %> 
+                
             </ul>
             <div class="end-nav">
                 <div class="user-end-nav">

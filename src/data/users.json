@@ -12,15 +12,17 @@
         "email": "jhan@mail.com",
         "telefono": "1111111111",
         "password": "123",
-        "avatar": ""
+        "avatar": "",
+        "rol":"admin"
     },
     {
         "id": 2,
-        "name": "Sebastia",
+        "name": "Sebastian",
         "email": "sebastian@mail.com",
         "telefono": "1212121212",
         "password": "1234",
-        "avatar": ""
+        "avatar": "",
+        "rol":"admin"
     },
     {
         "id": 3,
@@ -28,15 +30,17 @@
         "email": "selena@mail.com",
         "telefono": "1313131313",
         "password": "12345",
-        "avatar": ""
+        "avatar": "",
+        "rol":"admin"
     },
     {
         "id": 4,
         "name": "Juan",
         "email": "juan@mail.com",
         "telefono": "1414141414",
-        "password": "123456",
-        "avatar": ""
+        "password": "1234",
+        "avatar": "",
+        "rol":"user"
     },
     {
         "id": 5,
