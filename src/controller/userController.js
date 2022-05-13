@@ -73,7 +73,7 @@ module.exports = {
                 name: req.body.name,
                 email: req.body.email,
                 password: req.body.password,
-                avatar: req.file ? req.file.filename : "",
+                avatar: req.file ? req.file.filename : "default-image.jpg",
                 rol: "user"
             }
 
