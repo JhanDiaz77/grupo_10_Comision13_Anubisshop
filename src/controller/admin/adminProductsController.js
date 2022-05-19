@@ -56,7 +56,8 @@ module.exports = {
    
              writeProducts(products);
    
-             res.send(`Modificaste el producto exitosamente!`)
+            /* res.send(`Modificaste el producto exitosamente!`) */
+            res.redirect('/admin/list')
             
        },
     productDelete: (req,res)  => {
@@ -73,7 +74,8 @@ module.exports = {
         
         writeProducts(products)
 
-        res.send('Eliminaste el producto')
+        /* res.send('Eliminaste el producto') */
+        res.redirect('/admin/list')
   },
     
 }

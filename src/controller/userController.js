@@ -98,8 +98,12 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
         res.redirect('/')
-    }
+    },
+    userProfile: (req,res)  => {
+        res.render('users/userProfile',{
+            session: req.session
+        })
 
-    
+    }
 }
 

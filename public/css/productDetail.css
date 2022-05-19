@@ -80,6 +80,18 @@ main div.detalle-producto div.contenido-text section.detalles div.añadir-carrit
     font-size: 15px;
     border-style: none;
 }
+main div.detalle-producto div.contenido-text section.detalles div.__cantidad{
+    height: 2rem;
+   /*  border: solid 1px var(--color-VioletaOscuro); */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+main div.detalle-producto div.contenido-text section.detalles div.__cantidad form.input_number input{
+    width: 4rem;
+}
 
 
 /* Media queries */

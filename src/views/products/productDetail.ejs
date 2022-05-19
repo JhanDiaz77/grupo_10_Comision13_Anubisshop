@@ -28,7 +28,12 @@
                     <p>Tamaño: Baby 1</p>
                     <p>Color: Verde Manzana</p>
                     <p></p>
-                    <p>Cantidad: 1</p>
+                    <div class="__cantidad"> Cantidad
+                        <form class="input_number" action="" method="">
+                            <input type="number" name="" id="" value="1">
+                        </form>
+                    </div>
+                    <!-- <p>Cantidad: 1</p> -->
                     <p>Costo: $<%= product.price %></p>
                     <% if (product.discount > 0) { %>
                         <p> Descuento: Ahora a <span> $<%= product.price - product.discount * product.price / 100 %></span></p>
@@ -39,10 +44,10 @@
                     
                     <div class="añadir-carrito">
                             <button>Agregar al carrito</button>
-                            <a href="/productos/edit/<%= product.id %>"><button>Editar Producto</button></a>
+                            <!-- <a href="/productos/edit/<%= product.id %>"><button>Editar Producto</button></a>
                             <form action="/productos/<%= product.id %>?_method=DELETE" method="POST">
                                 <button type="submit">Eliminar</button>
-                            </form>
+                            </form> -->
                     </div>
                 </section>
             </div>

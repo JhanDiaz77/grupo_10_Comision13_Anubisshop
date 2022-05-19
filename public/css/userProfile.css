@@ -1,0 +1,19 @@
+main.userProfile{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.profile__image{
+    height: 4rem;
+    width: 4rem;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+/* div.profile__image img{
+    height: 4rem;
+    width: 4rem;
+    background-color: lightgray;
+    border-radius: 50%;
+} */
