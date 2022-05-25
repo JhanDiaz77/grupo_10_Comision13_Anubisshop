@@ -2,7 +2,7 @@ module.export = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "anubisshop_db",
+    "database": "anubisshop_db1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
