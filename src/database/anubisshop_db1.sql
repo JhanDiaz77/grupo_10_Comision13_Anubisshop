@@ -145,6 +145,7 @@ CREATE TABLE `products` (
   `images` varchar(45) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
+  `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`subcategoryId`),
   CONSTRAINT `products_FK` FOREIGN KEY (`subcategoryId`) REFERENCES `subcategories` (`id`)
@@ -230,6 +231,7 @@ CREATE TABLE `users` (
   `avatar` varchar(45) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
+  `phone` int(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`) USING BTREE,
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
@@ -281,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-25 12:09:56
+-- Dump completed on 2022-05-26  9:43:32
