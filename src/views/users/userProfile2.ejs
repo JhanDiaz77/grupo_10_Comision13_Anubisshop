@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/headb')  %> 
+
+<body>
+    <%- include('../partials/header') %>
+
+    <section class="sect_prof">
+
+            <div class="infoContainer___">
+
+                <div class="micuenta_">
+
+                    <h2>Mi cuenta</h2>
+
+                    <div class="imageProfile">
+                        <img class="img" src="" alt="">
+                    </div>
+
+                </div>
+
+
+
+                <div class="misdatos_">
+
+                    <div class="editProfilesection">
+                        <span>Mis datos</span>
+
+                        <a href=""> Editar</a>
+                    </div>
+
+                    
+                    <div class="user__name">
+                        <i class="fa-solid fa-user"></i> 
+                        <span><%- users.name %> </span>
+        
+                    </div>
+
+                    <div class="user__email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span><%-users.email %> </span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="miscompras_">
+
+                    <h2>Mis compras</h2>
+
+                    <a href="">Ir a mi carrito</a>
+
+                    <a href="/">Ir a la tienda</a>
+
+                </div>
+            </div>
+                
+    </section>
+
+    
+
+    <%- include('../partials/footer')  %> 
+    <%- include('../partials/scripts')  %>
+</body>
+</html>

@@ -99,11 +99,17 @@ module.exports = {
         req.session.destroy();
         res.redirect('/')
     },
-    userProfile: (req,res)  => {
-        res.render('users/userProfile',{
-            session: req.session
-        })
+    userProfile: (req,res)  => { /* METODO AGREGADO (TODO) */
 
-    }
+    let userId = +req.params.id;
+    let user = users.find(user => user.id === userId);
+
+    res.render('users/userProfile2',{
+        users: user,
+        session: req.session
+        
+    })
+
+}
 }
 
