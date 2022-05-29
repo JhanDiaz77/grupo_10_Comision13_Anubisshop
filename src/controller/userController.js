@@ -98,7 +98,7 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
 
-        if(req.cookies.formarCookie){
+        if(req.cookies.anubisCook){
             res.cookie('anubisCook', "", { maxAge: -1 })
         }
 
