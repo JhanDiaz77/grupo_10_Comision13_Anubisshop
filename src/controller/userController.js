@@ -25,7 +25,7 @@ module.exports = {
 
             if(req.body.remember){
                 const TIME_IN_MILISECONDS = 60000;
-                res.cookie('AnubisCook', req.session.user, {
+                res.cookie('anubisCook', req.session.user, {
                     expires: new Date(Date.now() + TIME_IN_MILISECONDS),
                     httpOnly: true,
                     secure: true
@@ -97,14 +97,20 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
+
+        if(req.cookies.formarCookie){
+            res.cookie('anubisCook', "", { maxAge: -1 })
+        }
+
         res.redirect('/')
     },
+
     userProfile: (req,res)  => { /* METODO AGREGADO (TODO) */
 
     let userId = +req.params.id;
     let user = users.find(user => user.id === userId);
 
-    res.render('users/userProfile2',{
+    res.render('users/userProfile',{
         users: user,
         session: req.session
         
