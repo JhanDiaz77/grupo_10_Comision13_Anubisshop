@@ -1,30 +1,30 @@
 module.exports = (sequelize, dataTypes)=>{
-    let alias = 'ProductImages'
+    
+    let alias = 'Subcategories';
 
     let cols = {
         id:{
             type:dataTypes.INTEGER(11),
-            primaryKey:true,
+            allowNull:false,
             autoIncrement:true,
-            allowNull:false
+            primaryKey:true
         },
-        imagen:{
+        nombre:{
             type:dataTypes.STRING(45),
             allowNull:false
         },
-        producto_id:{
+        categoria_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false
         }
     }
-    
-    let  config = {
-        tableName:'product_images',
+
+    let config = {
+        tableName: "subcategories",
         timestamps:false
     }
 
-    const Product_image = sequelize.define(alias, cols, config);
-
+    const Subcategory = sequelize.define(alias, cols, config);
     
-    return Product_image;
+    return Subcategory;
 }
