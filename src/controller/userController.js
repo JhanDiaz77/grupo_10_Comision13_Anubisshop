@@ -107,14 +107,14 @@ module.exports = {
 
     userProfile: (req,res)  => { /* METODO AGREGADO (TODO) */
 
-    let userId = +req.params.id;
-    let user = users.find(user => user.id === userId);
+        let userId = +req.params.id;
+        let user = users.find(user => user.id === userId);
 
-    res.render('users/userProfile',{
-        users: user,
-        session: req.session
-        
-    })
+        res.render('users/userProfile2',{
+            user,
+            session: req.session
+            
+        })
 
 }
 }
