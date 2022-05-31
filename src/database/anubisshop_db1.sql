@@ -231,11 +231,7 @@ CREATE TABLE `users` (
   `avatar` varchar(45) DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
-<<<<<<< HEAD
   `phone` int(30) DEFAULT NULL,
-=======
-  `phone` int(15) DEFAULT NULL,
->>>>>>> 82afa9b34e933aad11349446ad8cc5587441d516
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`) USING BTREE,
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
@@ -287,8 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
 -- Dump completed on 2022-05-31 10:00:53
-=======
--- Dump completed on 2022-05-27 21:28:38
->>>>>>> 82afa9b34e933aad11349446ad8cc5587441d516
