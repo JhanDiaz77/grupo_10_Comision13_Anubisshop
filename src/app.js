@@ -29,8 +29,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: {}
 }));
-/* app.use(cookieParser());
-app.use(cookieSession) */
+app.use(cookieParser());
+app.use(cookieSession)
 
 /* Middleware de rutas */
 app.use('/', indexRouter); // HOME - Contact 

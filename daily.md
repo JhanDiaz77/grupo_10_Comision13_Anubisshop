@@ -77,6 +77,20 @@ _Se novedades del sprint 5_
 
 _Se informo sobre las novedades del sprint 5_
 
+### Daily 25/5 🔩
+
+_Se reviso los avances del Sprint 5_
+
+_Se implemento los cambios sugeridos_
+
+_Se reasignaron las tarjetas en trello del sprint 6_
+
+### Daily 27/5 🔩
+
+_Se informo sobre las novedades del sprint 6_
+
+_Se cumple los tiempos asignados sin novedades_
+
 
 
 

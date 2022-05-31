@@ -12,20 +12,24 @@
         <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
 
         <div class="header__carrito"> <a href="/productos/cart"><i style="color: black;" class="fa-solid fa-cart-shopping"></i> </a></div>
-        <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a></div>
+        <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+            <% if (typeof session.user != "undefined") { %>
+                <div class="punto-verde"></div>
+            <% } %> 
+        </div>
 
     </div> 
 
     <div class="header-buscador">
-           
+        <!-- <p>Online</p> -->
         <div class="search-bar">
             <form class="search-bar-barra" action="/search" method="GET">
                 <input class="busqueda" type="text" name="keywords" placeholder="Buscar productos, marcas">
                 <button type="submit" class="lupa">
                     <i class="fas fa-search"></i>
                 </button>
-                
             </form>
+            
         </div>
 
     </div>    
@@ -42,7 +46,7 @@
                 <li><a href="">Contactos</a></li>
                 <li><a href="">Quienes Somos</a></li>
                 <% if (typeof session.user != "undefined") { %>
-                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                    <li><a href="/usuarios/perfil/<%-session.user.id %>">Mi perfil</a></li> <!--       %-users.id % <>      si le agrego esto a la ruta, no deja ingresar a /productos   -->
                     <li><a href="/usuarios/logout">Cerrar sesión</a></li>
                     <% if (session.user.rol === "admin") { %>
                         <li><a href="/admin">Admin</a></li>

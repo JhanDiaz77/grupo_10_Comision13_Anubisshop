@@ -228,6 +228,7 @@ header .header_nav-burger.active {
     }
 
     header .header__container div.header__user{
+        position: relative;
         display: block;
         width: 30px;
         font-size: 1.5rem;
@@ -236,6 +237,18 @@ header .header_nav-burger.active {
     } 
     header .header__container div.header__user i{
         color: black;
+    }
+
+    div.punto-verde {
+        background-color: rgb(7, 211, 7);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+
     }
 
     header .header__container div.header__carrito{
