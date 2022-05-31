@@ -80,8 +80,8 @@ CREATE TABLE `order_items` (
   `orderId` int(11) NOT NULL,
   `productId` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  `updateAt` datetime NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updateAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `order_items_FK` (`orderId`),
   KEY `order_items_FK_1` (`productId`),
@@ -110,8 +110,8 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   `state` varchar(100) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `orders_FK` (`userId`),
   CONSTRAINT `orders_FK` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
@@ -143,8 +143,8 @@ CREATE TABLE `products` (
   `promo` varchar(20) DEFAULT NULL,
   `discount` int(11) DEFAULT NULL,
   `images` varchar(45) DEFAULT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updatedAt` timestamp NULL DEFAULT NULL,
   `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`subcategoryId`),
@@ -198,8 +198,8 @@ CREATE TABLE `subcategories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `categoryId` int(11) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `subcategories_FK` (`categoryId`),
   CONSTRAINT `subcategories_FK` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
@@ -224,14 +224,14 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `rol_id` int(11) NOT NULL,
-  `email` varchar(45) NOT NULL,
+  `email` varchar(60) NOT NULL,
   `password` varchar(70) NOT NULL,
   `avatar` varchar(45) DEFAULT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
-  `phone` int(15) DEFAULT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updatedAt` timestamp NULL DEFAULT NULL,
+  `phone` int(30) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`) USING BTREE,
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
@@ -283,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-26  9:43:32
+-- Dump completed on 2022-05-31 10:00:53
