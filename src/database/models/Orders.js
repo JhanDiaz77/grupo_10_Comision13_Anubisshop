@@ -19,8 +19,8 @@ module.exports = (sequelize, dataTypes) =>{
         tableName: 'orders'
     }
 
-    const Purchase = sequelize.define(alias, cols, config);
+    const Orders = sequelize.define(alias, cols, config);
 
-    return Purchase
+    return Orders
 
 }
