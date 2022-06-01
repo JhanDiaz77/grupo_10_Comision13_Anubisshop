@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `addresses`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `addresses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `street` varchar(100) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `province` varchar(100) NOT NULL,
+  `street` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `province` varchar(45) NOT NULL,
   `number` int(11) NOT NULL,
   `postal_code` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
@@ -109,7 +109,7 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
-  `state` varchar(100) NOT NULL,
+  `state` varchar(45) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -136,7 +136,7 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `price` int(11) NOT NULL,
   `description` text DEFAULT NULL,
   `subcategoryId` int(11) NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE `products` (
   `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`subcategoryId`),
-  CONSTRAINT `products_FK` FOREIGN KEY (`subcategoryId`) REFERENCES `subcategories` (`id`)
+  CONSTRAINT `products_FK` FOREIGN KEY (`subcategoryId`) REFERENCES `sub_categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -170,7 +170,7 @@ DROP TABLE IF EXISTS `products_images`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products_images` (
   `id` int(11) NOT NULL,
-  `imageName` varchar(45) NOT NULL,
+  `image_name` varchar(45) NOT NULL,
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_79` (`product_id`) USING BTREE,
@@ -188,15 +188,15 @@ LOCK TABLES `products_images` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `subcategories`
+-- Table structure for table `sub_categories`
 --
 
-DROP TABLE IF EXISTS `subcategories`;
+DROP TABLE IF EXISTS `sub_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `subcategories` (
+CREATE TABLE `sub_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `categoryId` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
@@ -207,12 +207,12 @@ CREATE TABLE `subcategories` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `subcategories`
+-- Dumping data for table `sub_categories`
 --
 
-LOCK TABLES `subcategories` WRITE;
-/*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
-/*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
+LOCK TABLES `sub_categories` WRITE;
+/*!40000 ALTER TABLE `sub_categories` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sub_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -283,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-31 10:00:53
+-- Dump completed on 2022-06-01  9:50:01

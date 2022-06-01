@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) =>{
 
-    let alias = 'Order_Items';
+    let alias = 'OrderItem';
 
     let cols = {
         id:{
@@ -29,8 +29,19 @@ module.exports = (sequelize, dataTypes) =>{
         timestamps: false
     }
 
-    const Order_Items = sequelize.define(alias, cols, config);
+    const OrderItem = sequelize.define(alias, cols, config);
 
-    return Order_Items
+    OrderItem.associate = (models) => {
+        OrderItem.belonsTo(models.Order, {
+            as: "order",
+            foreignKey: "orderId"
+        })
+        OrderItem.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "productId"
+        })
+    }
+
+    return OrderItem
 
 }

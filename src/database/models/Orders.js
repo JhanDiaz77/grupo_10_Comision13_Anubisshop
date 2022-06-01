@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) =>{
 
-    let alias = 'Orders';
+    let alias = 'Order';
 
     let cols = {
         id:{
@@ -12,15 +12,32 @@ module.exports = (sequelize, dataTypes) =>{
         userId:{
             type: dataTypes.INTEGER(11),
             allowNull:false
+        },
+        state: {
+            type: dataTypes.STRING(45),
+            allowNull:false
+
         }
     }
 
     let config = {
-        tableName: 'orders'
+        tableName: 'orders',
+        timestamps: false,
     }
 
-    const Orders = sequelize.define(alias, cols, config);
+    const Order = sequelize.define(alias, cols, config);
 
-    return Orders
+    Order.associate = (models) => {
+        Order.belonsTo(models.User, {
+            as: "user",
+            foreignKey: "userId"
+        })
+        Order.hasMany(models.orderItem, {
+            as: "order_items",
+            foreignKey: "orderId"
+        })
+    }
+    
+    return Order
 
 }

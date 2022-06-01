@@ -6,40 +6,58 @@ module.exports = function(sequelize, dataTypes){
             type:dataTypes.INTEGER(11),
             primaryKey:true,
             autoIncrement:true,
-            allowNull:false
+            allowNull:false,
         },
         name:{
-            type:dataTypes.STRING(100),
-            allowNull:false
+            type:dataTypes.STRING(45),
+            allowNull:false,
         },
         price:{
             type:dataTypes.INTEGER(11),
-            allowNull:false
+            allowNull:false,
         },
         description:{
-            type:dataTypes.STRING(800)
+            type:dataTypes.TEXT,
         },
-        promo:{
-            type:dataTypes.STRING(20)
-        },
-        discount:{
-            type:dataTypes.INTEGER(11)
-        },
-        
         subcategoryId:{
             type:dataTypes.INTEGER(11),
-            allowNull:false
-        }
+            allowNull:false,
+        },
+        promo:{
+            type:dataTypes.STRING(20),
+        },
+        discount:{
+            type:dataTypes.INTEGER(11),
+        },
+        stock: {
+            type: dataTypes.BOOLEAN,
+            allowNull: false,
+        }     
+        
     }
 
     let config = {
         tableName: "products",
         timestamps: false,
-        underscored: true
+        
     }
 
     const Product = sequelize.define(alias, cols, config);
 
+    Product.associate = (models) => {
+        Product.belonsTo(models.OrderItem, {
+            as: "order_item",
+            foreignKey: "productId"
+        })
+        Product.hasMany(models.ProductImage, {
+            as: "productImages",
+            foreignKey: "product_id",
+        })
+        Product.belonsTo(models.SubCategory, {
+            as: "sub_category",
+            foreignKey: "SubcategoryId"
+        })
+    }
  
 
     return Product;

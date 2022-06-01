@@ -1,16 +1,20 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = 'Users';
+    let alias = 'User';
 
     let cols= {
         id:{
             type:dataTypes.INTEGER(11),
             primaryKey:true,
             autoIncrement:true,
-            allowNull:false
+            allowNull:false,
         },
         name:{
             type:dataTypes.STRING(45),
-            allowNull:false
+            allowNull:false,
+        },
+        rol_id:{
+            type:dataTypes.INTEGER(11),
+            allowNull:false,
         },
         email:{
             type:dataTypes.STRING(60),
@@ -18,15 +22,15 @@ module.exports = function(sequelize, dataTypes){
         },
         password:{
             type:dataTypes.STRING(70),
-            defaultValue: null
+            defaultValue: null,
+        },
+        avatar:{
+            type:dataTypes.STRING(45),
+            
         },
         phone:{
             type:dataTypes.STRING(30),
-            defaultValue: null
-        },
-        rol_id:{
-            type:dataTypes.INTEGER(11),
-            allowNull:false
+            
         }
     }
 
@@ -36,7 +40,22 @@ module.exports = function(sequelize, dataTypes){
         underscored: true
     }
 
-    const Users = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
 
-    return Users;
+    User.associate = (models) => {
+        User.belongsTo(models.UserRol, {
+            as: "rol",
+            foreignKey: "rol_id"
+        })
+        User.hasMany(models.Address, {
+            as: "addresses",
+            foreignKey: "user_id"
+        })
+        User.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "userId"
+        })
+    };
+
+    return User;
 }

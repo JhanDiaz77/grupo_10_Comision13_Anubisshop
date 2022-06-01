@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes)=>{
             autoIncrement:true,
             allowNull:false
         },
-        imagen:{
+        image_name:{
             type:dataTypes.STRING(45),
             allowNull:false
         },
@@ -19,12 +19,18 @@ module.exports = (sequelize, dataTypes)=>{
     }
     
     let  config = {
-        tableName:'product_images',
+        tableName:'products_images',
         timestamps:false
     }
 
-    const Product_image = sequelize.define(alias, cols, config);
+    const ProductImage = sequelize.define(alias, cols, config);
 
+    ProductImage.associate = (models) => {
+        ProductImage.belongsTo(models.Product, {
+            as: "product",
+            foreingKey: "product_id"
+        })
+    }
     
-    return Product_image;
+    return ProductImage;
 }
