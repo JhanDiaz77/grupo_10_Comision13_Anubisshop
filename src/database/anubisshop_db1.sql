@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -76,7 +76,7 @@ DROP TABLE IF EXISTS `order_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `order_items` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `orderId` int(11) NOT NULL,
   `productId` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
@@ -107,7 +107,7 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) NOT NULL,
   `state` varchar(45) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -135,7 +135,7 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `price` int(11) NOT NULL,
   `description` text DEFAULT NULL,
@@ -169,7 +169,7 @@ DROP TABLE IF EXISTS `products_images`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products_images` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `image_name` varchar(45) NOT NULL,
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -201,8 +201,8 @@ CREATE TABLE `sub_categories` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `subcategories_FK` (`categoryId`),
-  CONSTRAINT `subcategories_FK` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
+  KEY `sub_categories_FK` (`categoryId`),
+  CONSTRAINT `sub_categories_FK` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -223,7 +223,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `rol_id` int(11) NOT NULL,
   `email` varchar(60) NOT NULL,
@@ -231,7 +231,7 @@ CREATE TABLE `users` (
   `avatar` varchar(45) DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
-  `phone` int(30) DEFAULT NULL,
+  `phone` varchar(70) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`) USING BTREE,
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
@@ -255,10 +255,10 @@ DROP TABLE IF EXISTS `users_rols`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users_rols` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `rol_name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,6 +267,7 @@ CREATE TABLE `users_rols` (
 
 LOCK TABLES `users_rols` WRITE;
 /*!40000 ALTER TABLE `users_rols` DISABLE KEYS */;
+INSERT INTO `users_rols` VALUES (1,'USER'),(2,'ADMIN');
 /*!40000 ALTER TABLE `users_rols` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-01  9:50:01
+-- Dump completed on 2022-06-03 22:25:32

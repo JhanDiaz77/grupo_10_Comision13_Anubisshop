@@ -29,7 +29,7 @@ module.exports = function(sequelize, dataTypes){
             
         },
         phone:{
-            type:dataTypes.STRING(30),
+            type:dataTypes.STRING(70),
             
         }
     }
