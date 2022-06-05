@@ -1,3 +1,8 @@
 main.admin-main{
-    height: 16rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-image: url(../images/rabitpenup.png);
+    height: 17rem;
 }
+
