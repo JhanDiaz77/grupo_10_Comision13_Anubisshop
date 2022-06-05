@@ -4,20 +4,82 @@
     <%- include('../partials/headb')  %> 
 
 <body>
-    <%- include('../partials/header') %> 
+    <%- include('../partials/header') %>
 
-    <main class="userProfile">
+    <section class="sect_prof">
 
+            <h2 class="myaccount">Mi cuenta</h2>
+
+            <div class="micuenta_">
+
+
+                <div class="imageProfile">
+                    <img class="img" src="" alt="">
+                </div>
+
+            </div>
+
+            <div class="infoContainer___">
+
+                <div class="misdatos_">
+
+                    <div class="editProfilesection">
+                        <h4>Mis datos</h4>
+
+                        <!-- <a href=""> Editar</a> -->
+                    </div>
+
+                    <div class="user__name">
+                        <i class="fa-solid fa-user"></i> 
+                        <span><%- user.name %> </span>
         
+                    </div>
+
+                    <div class="user__email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span><%-user.email %> </span>
+                    </div>
+
+                    <div class="user__phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span><%-user.phone %> </span>
+                    </div>
+
+                    <div class="editardatosBox">
+                        <form action="" method="">
+                        <h5>Editar mis datos</h5>
+                        <div class="inputCont">
+                            <label for="name">Nombre</label>
+                            <input class="" type="text" name="name" id="name">
+                        </div>
+                        <div class="inputCont">
+                            <label for="phone">Teléfono</label>
+                            <input type="text"name="phone" id="phone">
+                        </div>
+                        <button  class="edit__Button" type="submit">Editar</button>
+                    </form>
+                    </div>
+
+                </div>
 
 
-    </main>
 
+                <div class="miscompras_">
 
+                    <h4>Mis compras</h4>
 
+                    <a href="">Ir a mi carrito</a>
+
+                    <a href="/">Ir a la tienda</a>
+
+                </div>
+            </div>
+                
+    </section>
 
     
-    <%- include('../partials/footer')  %>   
-    <%- include('../partials/scripts')  %>
 
+    <%- include('../partials/footer')  %> 
+    <%- include('../partials/scripts')  %>
 </body>
+</html>

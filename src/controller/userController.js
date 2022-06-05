@@ -110,7 +110,7 @@ module.exports = {
         let userId = +req.params.id;
         let user = users.find(user => user.id === userId);
 
-        res.render('users/userProfile2',{
+        res.render('users/userProfile',{
             user,
             session: req.session
             
