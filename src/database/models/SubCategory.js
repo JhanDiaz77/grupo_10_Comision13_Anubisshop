@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes)=>{
             type:dataTypes.STRING(45),
             allowNull:false
         },
-        categoryId:{
+        category_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false
         }

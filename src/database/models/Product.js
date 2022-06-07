@@ -19,7 +19,7 @@ module.exports = function(sequelize, dataTypes){
         description:{
             type:dataTypes.TEXT,
         },
-        subcategoryId:{
+        subcategory_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false,
         },
@@ -45,18 +45,19 @@ module.exports = function(sequelize, dataTypes){
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models) => {
-        /* Product.belongsTo(models.OrderItem, {
-            as: "order_item",
-            foreignKey: "productId"
-        }) */
+        Product.belongsTo(models.SubCategory, {
+            as: "subCategory",
+            foreignKey: "subcategory_id"
+        })        
+        Product.hasMany(models.OrderItem, {
+            as: "orderItems",
+            foreignKey: "product_id"
+        })
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "product_id",
         })
-        Product.belongsTo(models.SubCategory, {
-            as: "sub_category",
-            foreignKey: "subcategory_id"
-        })
+        
     }
  
 
