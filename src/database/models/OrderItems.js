@@ -9,11 +9,11 @@ module.exports = (sequelize, dataTypes) =>{
             autoIncrement: true,
             allowNull: false    
         },
-        orderId:{
+        order_id:{
             type: dataTypes.INTEGER(11),
             allowNull:false
         },
-        productId:{
+        product_id:{
             type: dataTypes.INTEGER(11),
             allowNull:false
         },
