@@ -1,5 +1,5 @@
 const adminCheck = (req, res, next) => {
-    if(req.session.user.rol === "admin"){
+    if(req.session.user.rol === "ADMIN"){
         next()
     }else{
         res.render("restriccion")

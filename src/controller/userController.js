@@ -27,7 +27,7 @@ module.exports = {
                     name: user.name,
                     /*  avatar: user.avatar, */
                     email: user.email,
-                    rol: user.rol
+                    rol: user.rol_id
                 }
     
                 if(req.body.remember){
@@ -116,14 +116,37 @@ module.exports = {
             })
         })
     },
-    profileUpdate: (req, res) => {
-        
-    },
-    addressCreate: (req, res) => {
+    profileEdit: (req, res) => {
 
-    },
-    addressDestroy: (req, res) => {
+        let errors = validationResult(req);
 
+        if(errors.isEmpty()){
+            db.User.update({
+                ...req.body
+            },{
+                where: {
+                    id: req.session.user.id
+                }
+            })
+            .then(() => 
+                res.redirect("/usuarios/perfil/:id")
+            )
+            .catch(error => res.send(error))
+        }else{
+            db.User.findOne({
+                where: {
+                    id: req.session.user.id
+                },
+            })
+            .then((user) => {
+                res.render("users/userProfile", {
+                    session: req.session,
+                    user,
+                    titulo: req.session.user.name,
+                    errors: errors.mapped()
+                })
+            })
+        }
     },
     
 }

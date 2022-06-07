@@ -46,15 +46,21 @@
                     </div>
 
                     <div class="editardatosBox">
-                        <form action="" method="">
+                        <form action="/usuarios/perfil?_method=PUT" method="POST">
                         <h5>Editar mis datos</h5>
                         <div class="inputCont">
                             <label for="name">Nombre</label>
                             <input class="" type="text" name="name" id="name">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text-danger"><%= errors.name.msg %></small>
+                            <% } %>
                         </div>
                         <div class="inputCont">
                             <label for="phone">Teléfono</label>
                             <input type="text"name="phone" id="phone">
+                            <% if (locals.errors && errors.phone) { %>
+                                <small class="text-danger"><%= errors.phone.msg %></small>
+                            <% } %>
                         </div>
                         <button  class="edit__Button" type="submit">Editar</button>
                     </form>
