@@ -29,10 +29,10 @@ CREATE TABLE `addresses` (
   `province` varchar(45) NOT NULL,
   `number` int(11) NOT NULL,
   `postal_code` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `addresses_userId_IDX` (`userId`) USING BTREE,
-  CONSTRAINT `addresses_FK` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
+  KEY `addresses_userId_IDX` (`user_id`) USING BTREE,
+  CONSTRAINT `addresses_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -235,7 +235,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`) USING BTREE,
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,6 +244,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'juan',1,'juan@mail.com','$2a$10$emEgPGu6V6rCW87Aoe.OSudaCin3j5G4K/i6VjiT7ysJx7l0jHxRe','default-image.jpg','2022-06-07 04:18:21',NULL,NULL),(2,'jhan',2,'jhan@mail.com','$2a$10$SbJiMZZCydbDEvfQkcY.T..nNIqGDW.rLz4CF2iVQiiFxc5qQjIzW','default-image.jpg','2022-06-07 04:26:08',NULL,NULL),(3,'selena',2,'selena@mail.com','$2a$10$QKw.oaYT8vmTrnTVqBsYKu9J6Qt4kcdlO4bXInlt1rUh/hbuzCqHy','default-image.jpg','2022-06-07 04:26:08',NULL,NULL),(4,'sebastian',2,'seba@mail.com','$2a$10$N5pHq1xYqjlPxm2ScJeQc.TeAfFukSB/EyXI/FMH7YwimkgadUFEe','default-image.jpg','2022-06-07 04:26:08',NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,4 +285,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-03 22:25:32
+-- Dump completed on 2022-06-07  9:38:25

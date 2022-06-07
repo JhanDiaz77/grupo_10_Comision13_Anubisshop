@@ -37,7 +37,6 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: "users",
         timestamps: false,
-        underscored: true
     }
 
     const User = sequelize.define(alias, cols, config);
@@ -50,10 +49,6 @@ module.exports = function(sequelize, dataTypes){
         User.hasMany(models.Address, {
             as: "addresses",
             foreignKey: "user_id"
-        })
-        User.hasMany(models.Order, {
-            as: "orders",
-            foreignKey: "userId"
         })
     };
 

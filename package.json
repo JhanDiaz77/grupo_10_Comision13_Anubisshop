@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.6",
     "express": "^4.17.3",

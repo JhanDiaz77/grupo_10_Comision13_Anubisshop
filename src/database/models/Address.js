@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
             type:dataTypes.INTEGER(11),
             allowNull:false
         },
-        userId:{
+        user_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false
         }
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
     const Address= sequelize.define(alias, cols, config);
 
     Address.associate = (models) => {
-        Address.hasMany(models.User, {
+        Address.belongsTo(models.User, {
             as: "users",
             foreignKey: "user_id"
         })
