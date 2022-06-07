@@ -1,6 +1,7 @@
 const{ writeUsers, users } = require('../data')
 const { validationResult } = require('express-validator')
 
+
 module.exports = {
     login: (req,res)  => {
          res.render('users/login', {

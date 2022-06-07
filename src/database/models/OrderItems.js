@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) =>{
     const OrderItem = sequelize.define(alias, cols, config);
 
     OrderItem.associate = (models) => {
-        OrderItem.belonsTo(models.Order, {
+        OrderItem.belongsTo(models.Order, {
             as: "order",
             foreignKey: "orderId"
         })
