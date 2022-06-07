@@ -22,11 +22,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false
         },
         number:{
-            type:dataTypes.INTEGER(11),
+            type:dataTypes.STRING(45),
             allowNull:false
         },
         postal_code:{
-            type:dataTypes.INTEGER(11),
+            type:dataTypes.STRING(45),
             allowNull:false
         },
         user_id:{

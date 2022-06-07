@@ -33,13 +33,13 @@ module.exports = (sequelize, dataTypes) =>{
 
     OrderItem.associate = (models) => {
         OrderItem.belongsTo(models.Order, {
-            as: "order",
-            foreignKey: "orderId"
+            as: "orders",
+            foreignKey: "order_id"
         })
-        OrderItem.hasMany(models.Product, {
+       /*  OrderItem.hasMany(models.Product, {
             as: "products",
-            foreignKey: "productId"
-        })
+            foreignKey: "product_id"
+        }) */
     }
 
     return OrderItem

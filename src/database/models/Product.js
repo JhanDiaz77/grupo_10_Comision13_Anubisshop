@@ -45,17 +45,17 @@ module.exports = function(sequelize, dataTypes){
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models) => {
-        Product.belongsTo(models.OrderItem, {
+        /* Product.belongsTo(models.OrderItem, {
             as: "order_item",
             foreignKey: "productId"
-        })
+        }) */
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "product_id",
         })
-        Product.belonsTo(models.SubCategory, {
+        Product.belongsTo(models.SubCategory, {
             as: "sub_category",
-            foreignKey: "SubcategoryId"
+            foreignKey: "subcategory_id"
         })
     }
  

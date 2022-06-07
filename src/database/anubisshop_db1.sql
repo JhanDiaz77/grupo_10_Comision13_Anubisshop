@@ -27,8 +27,8 @@ CREATE TABLE `addresses` (
   `street` varchar(45) NOT NULL,
   `city` varchar(45) NOT NULL,
   `province` varchar(45) NOT NULL,
-  `number` int(11) NOT NULL,
-  `postal_code` int(11) NOT NULL,
+  `number` varchar(45) NOT NULL,
+  `postal_code` varchar(45) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `addresses_userId_IDX` (`user_id`) USING BTREE,
@@ -77,16 +77,16 @@ DROP TABLE IF EXISTS `order_items`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `order_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `orderId` int(11) NOT NULL,
-  `productId` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updateAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `order_items_FK` (`orderId`),
-  KEY `order_items_FK_1` (`productId`),
-  CONSTRAINT `order_items_FK` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`),
-  CONSTRAINT `order_items_FK_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`)
+  KEY `order_items_FK` (`order_id`),
+  KEY `order_items_FK_1` (`product_id`),
+  CONSTRAINT `order_items_FK` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `order_items_FK_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -108,13 +108,13 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `userId` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `state` varchar(45) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `orders_FK` (`userId`),
-  CONSTRAINT `orders_FK` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
+  KEY `orders_FK` (`user_id`),
+  CONSTRAINT `orders_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -139,7 +139,7 @@ CREATE TABLE `products` (
   `name` varchar(45) NOT NULL,
   `price` int(11) NOT NULL,
   `description` text DEFAULT NULL,
-  `subcategoryId` int(11) NOT NULL,
+  `subcategory_id` int(11) NOT NULL,
   `promo` varchar(20) DEFAULT NULL,
   `discount` int(11) DEFAULT NULL,
   `images` varchar(45) DEFAULT NULL,
@@ -147,8 +147,8 @@ CREATE TABLE `products` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `products_FK` (`subcategoryId`),
-  CONSTRAINT `products_FK` FOREIGN KEY (`subcategoryId`) REFERENCES `sub_categories` (`id`)
+  KEY `products_FK` (`subcategory_id`),
+  CONSTRAINT `products_FK` FOREIGN KEY (`subcategory_id`) REFERENCES `sub_categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -197,12 +197,12 @@ DROP TABLE IF EXISTS `sub_categories`;
 CREATE TABLE `sub_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `categoryId` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `sub_categories_FK` (`categoryId`),
-  CONSTRAINT `sub_categories_FK` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
+  KEY `sub_categories_FK` (`category_id`),
+  CONSTRAINT `sub_categories_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -285,4 +285,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07 12:07:39
+-- Dump completed on 2022-06-07 13:41:59
