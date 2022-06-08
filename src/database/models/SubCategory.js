@@ -31,10 +31,10 @@ module.exports = (sequelize, dataTypes)=>{
             as: "category",
             foreignKey: "category_id"
         })
-        /* SubCategory.hasMany(models.Product, {
+        SubCategory.hasMany(models.Products, {
             as: "products",
             foreignKey: "subcategory_id"
-        }) */
+        })
     }
 
     return SubCategory;

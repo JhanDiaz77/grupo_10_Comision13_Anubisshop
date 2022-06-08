@@ -32,10 +32,10 @@ module.exports = (sequelize, dataTypes) =>{
             as: "user",
             foreignKey: "user_id"
         })
-       /*  Order.hasMany(models.orderItem, {
+        Order.hasMany(models.OrderItem, {
             as: "order_items",
             foreignKey: "order_id"
-        }) */
+        })
     }
     
     return Order
