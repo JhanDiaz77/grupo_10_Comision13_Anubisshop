@@ -39,12 +39,9 @@ section.sect_prof div.infoContainer___ div.misdatos_ .editProfilesection a{
     border-radius: 4px;
     font-weight: bold;
 }
-
-
 section.sect_prof div div.miscompras_{
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
 }
 section.sect_prof div div.miscompras_ a{
     text-decoration: none;
@@ -64,6 +61,7 @@ section.sect_prof div.infoContainer___ div.editardatosBox{
 section.sect_prof div.infoContainer___ div.editardatosBox form div.inputCont{
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.5rem;
 }
 section.sect_prof div.infoContainer___ div.editardatosBox form div.inputCont input{
     height: 2rem;
@@ -86,6 +84,31 @@ section.sect_prof div.infoContainer___ div.editardatosBox form button.edit__Butt
     height: 2rem;
     width: 4rem;
 }
+/* GESTION DE DIRECCIONES */
+section.sect_prof div.gestionDireccionBox{
+    margin: 1rem;
+}
+section.sect_prof div.gestionDireccionBox form div.infoBox1 div.box_a{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+section.sect_prof div.gestionDireccionBox form div.infoBox1 input{
+    height: 2rem;
+    outline: none;
+    border: 1px lightgray solid;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+section.sect_prof div.gestionDireccionBox form div.infoBox1 div.box_b{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+section.sect_prof div.gestionDireccionBox form div.infoBox2 div{
+    margin-bottom: 0.8rem;
+}
+
 
 @media (min-width: 665px){
 
@@ -116,6 +139,33 @@ section.sect_prof div.infoContainer___ div.editardatosBox form button.edit__Butt
     }
     section.sect_prof div.infoContainer___ div.editardatosBox{
         margin-top: 3rem;
+    }
+    /* GESTION DE DIRECCIONES */
+    section.sect_prof div.gestionDireccionBox{
+        padding: 1rem;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+    section.sect_prof div.gestionDireccionBox form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section.sect_prof div.gestionDireccionBox form div.infoBox1{
+        width: 48%;
+    }
+    section.sect_prof div.gestionDireccionBox form div.infoBox2{
+        width: 48%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 7px;
+    }
+    section.sect_prof div.gestionDireccionBox form div.infoBox2 div{
+        
+        margin-top: 1rem;
     }
 
 }
