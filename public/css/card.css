@@ -1,5 +1,8 @@
 /* Vista de tarjeta */
 
+h2.listadoProductos{
+    margin: 1rem;
+}
 
 main div.product-final {
     /* position: relative; */
@@ -21,9 +24,9 @@ main div.product-final article.article-final{
     box-shadow: 1px 2px 3px 3px rgba(77, 75, 75, 0.5);
     margin: 0.5rem;
     width: 100%;
-    height: 100vh;
     max-width: 240px;
     max-height: 25rem;
+    padding: 0.5rem;
 }
 
 main div.product-final article.article-final a{
@@ -56,7 +59,7 @@ main div.product-final div.detail-product {
     /* border: solid 1px black; */
     display: flex;
     flex-direction: column;
-    height: 35%;
+    height: 119px;
 }
 
 main div.product-final div.detail-product h3 {
@@ -101,20 +104,25 @@ main div.product-final div.boton-press {
     justify-content: space-evenly;
 }
 main div.product-final div.boton-press div.boton-one {
-    width: 12rem;
+    width: 100%;
 }
 
 main div.product-final div.boton-press div.boton-one button{
-    background-color: var(--color-VioletaOscuro);
+    background-color: var(--color-VioletaClaro);
     border: none;
     color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 0.5rem 0;
     width: 100%;
-    height: 2rem;
+    height: 2.2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
+}
+main div.product-final div.boton-press div.boton-one button:hover{
+    background-color: var(--color-VioletaOscuro);
+    transition:  0.5s;
 }
 
 .product-final .card__priceSale--original {
@@ -122,6 +130,19 @@ main div.product-final div.boton-press div.boton-one button{
     font-size: 24px;
     text-decoration: line-through;
     margin-right: 0.5rem;
+    padding-left: 0.3rem;
+}
+.product-final span.actualPrice{
+    padding-left: 0.3rem;
+    font-weight: bold;
+}
+.product-final span.default-msg{
+    padding-left: 0.3rem;
+}
+.product-final span.simplePrice{
+    margin-top: 8px;
+    font-weight: bold;
+    padding-left: 0.3rem;
 }
 
 @media (min-width: 550px){

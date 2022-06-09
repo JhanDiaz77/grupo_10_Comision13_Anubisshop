@@ -6,7 +6,7 @@
   
   <main>
     <section class="section-main">   
-        <h2>Listado de Productos</h2>
+        <h2 class="listadoProductos">Listado de Productos</h2>
         <section class="section-ofertas">
             <div class="product-final">
               <% products.forEach( product => { %>
@@ -16,13 +16,14 @@
                         <img src="images/<%- product.image %>" alt="ARNES">
                     </div>
                     <div class="detail-product">
-                        <h3><%- product.name %></h3>
-                        <p class="price-product">$<%- product.price %></p>
-                        <% if (product.discount > 0) { %>
-                          <p> Ahora a <span> $<%= product.price - product.discount * product.price / 100 %></span></p>
-                        <% } else { %>
-                          Producto 100% Argentino 
-                        <% } %>
+                      <h3><%- product.name %></h3>
+                            <% if (product.discount > 0) { %>
+                            <span class="card__priceSale--original">$ <%= product.price %> </span> 
+                            <span class="actualPrice"> Ahora $ <%=  product.price - product.discount * product.price / 100 %> </span>
+                            <% } else { %>
+                              <span class="default-msg">Producto 100% Argentino </span>  
+                              <span class="simplePrice">$ <%- product.price %></span>
+                            <% } %>
                     </div>
                     <div class="boton-press">
                         <div class="boton-one">
