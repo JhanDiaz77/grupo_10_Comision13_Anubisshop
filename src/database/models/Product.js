@@ -29,10 +29,10 @@ module.exports = function(sequelize, dataTypes){
         discount:{
             type:dataTypes.INTEGER(11),
         },
-        stock: {
+        /* stock: {
             type: dataTypes.BOOLEAN,
             allowNull: false,
-        }     
+        }   */   
         
     }
 
