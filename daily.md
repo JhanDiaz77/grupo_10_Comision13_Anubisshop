@@ -91,6 +91,43 @@ _Se informo sobre las novedades del sprint 6_
 
 _Se cumple los tiempos asignados sin novedades_
 
+### Daily 1/6 🔩
+
+_Se informo sobre las avances del sprint 6_
+
+_Se cumple los tiempos asignados sin novedades_
+### Daily 4/6 🔩
+
+_Se informo sobre las avances del sprint 6_
+
+_Se comunica problemas con la base de datos y los modelos_
+
+_Se le pide ayuda a los profesores sobre los problemas con la base de datos y los modelos_
+
+### Daily 7/6 🔩
+
+_Se informo sobre las avances del sprint 6_
+
+_Se comunica resuelve los problemas con la base de datos y los modelos_
+
+### Daily 7/6 🔩
+
+_Se informo sobre las avances del sprint 6_
+
+_Se le pide ayuda a los profesores sobre los problemas con el CRUD de productos_
+
+_Se le pide resuelve el problema con el CRUD de productos_
+
+_Se le pide mas tiempo a los profesores para entregar el sprint 6_
+
+### Daily 11/6 🔩
+
+_Se informo sobre las avances del sprint 6_
+
+_Se envia el sprint 6_
+
+
+
 
 
 
