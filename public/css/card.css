@@ -16,7 +16,6 @@ main div.product-final {
     flex-direction: column;
     align-items: center;
     line-height: normal;
-    
 }
 main div.product-final article.article-final{
    /*  position: relative; */
@@ -27,6 +26,7 @@ main div.product-final article.article-final{
     max-width: 240px;
     max-height: 25rem;
     padding: 0.5rem;
+    position: relative;
 }
 
 main div.product-final article.article-final a{
@@ -36,7 +36,7 @@ main div.product-final article.article-final a{
 
 main div.product-final div.cont-imagen{
    /*  border: solid 1px black; */
-    position: relative;
+   /*  position: relative; */
     width: auto;
     height: 100%;
     max-width: 100%;
@@ -49,8 +49,6 @@ main div.product-final div.cont-imagen img {
     max-width: 210px;
     height: 100%;
     max-height: 13rem;
-    position: relative;
-
 }
 
 
@@ -143,6 +141,17 @@ main div.product-final div.boton-press div.boton-one button:hover{
     margin-top: 8px;
     font-weight: bold;
     padding-left: 0.3rem;
+}
+.article-final span.ifdiscount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--font-roboto);
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--color-VioletaOscuro);  
+    border-radius: 0 0px 0 10px;  
 }
 
 @media (min-width: 550px){
