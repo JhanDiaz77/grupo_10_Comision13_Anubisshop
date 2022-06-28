@@ -43,8 +43,8 @@
             <ul class="top-list">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/productos">Productos</a></li>
-                <li><a href="">Contactos</a></li>
-                <li><a href="">Quienes Somos</a></li>
+                <li><a href="/contact">Contactos</a></li>
+                <li><a href="/nosotros">Quienes Somos</a></li>
                 <% if (typeof session.user != "undefined") { %>
                     <li><a href="/usuarios/perfil/<%-session.user.id %>">Mi perfil</a></li> <!--       %-users.id % <>      si le agrego esto a la ruta, no deja ingresar a /productos   -->
                     <li><a href="/usuarios/logout">Cerrar sesión</a></li>

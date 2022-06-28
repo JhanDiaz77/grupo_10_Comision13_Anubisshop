@@ -16,18 +16,20 @@
                     
                     <div class="input-container">
                         <label for="email"><h2>E-mail</h2></label>
-                        <input type="email" name="email" class="input-style" placeholder="Ingrese su E-mail" id="email" >
+                        <input type="email" id="email" name="email" class="input-style" placeholder="Ingrese su E-mail" id="email" >
                         <% if (locals.errors && errors.email) { %>
                             <small class="text-danger"><%= errors.email.msg %></small>
                         <% } %>
+                        <span class="error" id="emailErrors" style="color: red"></span>
                     </div>
                     
                     <div class="input-container">
                         <label for="password"><h2>Contraseña</h2></label>
-                        <input type="password" name="password" class="input-style" placeholder="Ingrese su contraseña" id="password" >
+                        <input type="password" name="password" id="pass" class="input-style" placeholder="Ingrese su contraseña" id="password" >
                         <% if (locals.errors && errors.password) { %>
                             <small class="text-danger"><%= errors.password.msg %></small>
                         <% } %>
+                        <span class="error" id="passErrors" style="color: red"></span>
                     </div>
                     <div class="form-check mb-3">
                         <input class="form-check-input" name="remember" type="checkbox" id="remember">
