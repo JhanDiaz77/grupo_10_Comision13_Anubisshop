@@ -10,16 +10,16 @@ const productValidator = require('../validations/productCreateValidator')
 
 
 /* no se si esta bien CRUD DE PRODUCTOS ADMIN*/
-router.get('/'/* , userSession ,adminCheck */ , adminIndexController.index)
+router.get('/', userSession ,adminCheck , adminIndexController.index)
 
 /* LISTA DE PRODUCTOS EN TABLA */
-router.get('/list', /* userSession , adminCheck , */ adminProductsController.list);
+router.get('/list', userSession , adminCheck , adminProductsController.list);
 /* GET - muestra Formulario de Agregar producto */
-router.get('/add',/*  userSession , adminCheck , */ adminProductsController.productAdd);
+router.get('/add', userSession , adminCheck , adminProductsController.productAdd);
 /* POST  CREA procesa informacion de formulario de agregar producto */
 router.post('/add',uploadFile.single('image'), productValidator ,adminProductsController.productCreate)
 /* GET - Editar producto */
-router.get('/list/editar/:id', /* userSession , adminCheck ,  */adminProductsController.productEdit);
+router.get('/list/editar/:id', userSession , adminCheck , adminProductsController.productEdit);
 /* PUT - actualiza informacion de formulario de Edicion */ 
 router.put('/list/editar/:id',uploadFile.single('image'), adminProductsController.productUpdate) 
 

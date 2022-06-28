@@ -24,8 +24,8 @@
                               <td> <strong> <%- producto.id %> </strong> </td>
                               <td><%- producto.name %></td>
                               <td><%- producto.price %></td>
-                              <td><%- producto.categoryId %></td>
-                              <td class="editDelete"><!--  -->
+                              <td><%- producto.categorias.name %></td>
+                              <td class="editDelete">
                                 <a href="/admin/list/editar/<%- producto.id %>" >
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>

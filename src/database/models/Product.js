@@ -19,7 +19,7 @@ module.exports = function(sequelize, dataTypes){
         description:{
             type:dataTypes.TEXT,
         },
-        subcategory_id:{
+        category_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false,
         },
@@ -29,10 +29,13 @@ module.exports = function(sequelize, dataTypes){
         discount:{
             type:dataTypes.INTEGER(11),
         },
+        images:{
+            type:dataTypes.STRING(45),
+        }
         /* stock: {
             type: dataTypes.BOOLEAN,
             allowNull: false,
-        }   */   
+        }  */    
         
     }
 
@@ -45,18 +48,15 @@ module.exports = function(sequelize, dataTypes){
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models) => {
-        Product.belongsTo(models.SubCategory, {
-            as: "subCategory",
-            foreignKey: "subcategory_id"
+        Product.belongsTo(models.Category, {
+            as: "categorias",
+            foreignKey: "category_id"
         })        
         Product.hasMany(models.OrderItem, {
             as: "orderItems",
             foreignKey: "product_id"
         })
-        Product.hasMany(models.ProductImage, {
-            as: "productImages",
-            foreignKey: "product_id",
-        })
+       
         
     }
  

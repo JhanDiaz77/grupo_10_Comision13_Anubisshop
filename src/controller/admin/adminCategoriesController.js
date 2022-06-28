@@ -1,74 +1,59 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../../database/models');
 
-const categoriesFilePath = path.join(__dirname, '../../data/categories.json');
-const categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
-const writeCategories = (data) =>  fs.writeFileSync(categoriesFilePath, JSON.stringify(data), "utf-8");
 
 module.exports={
     categoryList: (req, res) => {
+      db.Category.findAll()
+      .then(categories => {
         res.render('admin/categories/listCategory', {
-            categorias :categories
+           categorias: categories
         })
+      })
     },
-    /* Envia la vista de formulario de creación de categorias */
     categoryAdd: (req, res) => {
-        res.render('admin/categories/addCategory')/* , { titulo: "Agregar categoría"} */
+        res.render('admin/categories/addCategory')
     },
     createCategory: (req ,res)  => {
-        let lastId = 0;
-        categories.forEach(category => {
-             if(category.id > lastId){
-                  lastId = category.id
-             }
-        });
-
-        let newCategory = {
-          ...req.body,
-          id: lastId + 1
-      }
-
-        categories.push(newCategory);
-
-        writeCategories(categories);
-
-      /* res.send('El producto a sido creado exitosamente.') */
-      res.redirect('/admin/categorias/lista')
+      db.Category.create({
+        ...req.body
+      })
+      .then((categoria) => {
+        res.redirect('/admin/categorias/lista')
+      })
+      .catch(error => console.log(error))
+        
     },
     categoryEdit: (req, res)=>{
-        let idCategory = +req.params.id;
+      let idCategory = +req.params.id;
 
-        let categoria = categories.find( categoria => categoria.id === idCategory)
-
-        res.render('admin/categories/editCategory', {categoria})
+      db.Category.findByPk(idCategory)
+        .then( (categoria) => {
+          res.render('admin/categories/editCategory', {categoria})
+          })
+          .catch(error => console.log(error))
     },
     categoryUpdate: (req, res) => {
-        let categoryId = +req.params.id;
-        
-        categories.forEach(categoria => {
-          if(categoria.id === categoryId){
-            categoria.name = req.body.name
-          }
-        });
-  
-        writeCategories(categories);
-  
-        res.redirect('/admin/categorias/lista');
-      },
+      db.Category.update({
+        ...req.body,
+        },{
+          where: {
+            id: req.params.id
+        }
+        })
+        .then(()=> {
+          res.redirect('/admin/categorias/lista')
+        })
+        .catch(error => console.log(error))
+    },
     categoryDelete: (req,res)  => {
-        let categoryId = +req.params.id;
-        let categoryToDelete;
+      let categoryId = +req.params.id;
 
-        categories.forEach(category => {
-             if(category.id === categoryId){
-                  categoryToDelete = category.name
-                  let categoryToDeleteIndex = categories.indexOf(category);
-                  categories.splice(categoryToDeleteIndex, 1);
-             }
-        });
-        
-        writeCategories(categories)
-
-        res.redirect('/admin/categorias/lista')
-  },
+        db.Category.destroy({
+          where: {
+            id: categoryId
+          }
+        })
+        .then(()=> res.redirect('/admin/categorias/lista'))
+        .catch(error => console.log(error))
+    },
 }
