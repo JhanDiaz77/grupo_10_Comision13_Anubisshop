@@ -126,6 +126,28 @@ _Se informo sobre las avances del sprint 6_
 
 _Se envia el sprint 6_
 
+### Daily 24/6 🔩
+
+_Se informo sobre el sprint 7_
+
+_Se pide reunion para el 25 para realizar la distribucción de tares_
+
+### Daily 25/6 🔩
+
+_Se informo sobre el sprint 7 y distribución de tares_
+
+_Se revisa las mejoras del sprint 6_
+
+_Se informa de algunas fallas para mejorar_
+
+### Daily 28/6 🔩
+
+_Se informo sobre los avances del  sprint 7_
+
+_Se resolvio algunas detalles pendientes del sprint 6_
+
+
+
 
 
 
