@@ -47,7 +47,25 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-           
+        $form.addEventListener("submit", function(event) {
+
+            event.preventDefault()
+            let elementsForm = this.elements;
+            let errores = false;
+        
+            for (let index = 0; index < elementsForm.length - 1; index++) {
+                if(elementsForm[index].value == ""
+                 || elementsForm[index].classList.contains("is-invalid")){
+                    elementsForm[index].classList.add("is-invalid");
+                    submitErrors.innerHTML = "Hay errores en el formulario"
+                    errores = true;
+                }
+            } 
+            if(!errores){
+                alert("Validado!")
+                $form.submit()
+            }
+        })         
    
 
 })
