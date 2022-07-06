@@ -1,12 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
-const usersFilePath = path.join(__dirname, '../data/users.json'); /* linea agregada */
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));  /* linea agregada */
-
+const db = require('../database/models');
+const {Op} = db.Sequelize;
 
 const removeAccents = (str) => {
 	return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -14,22 +10,44 @@ const removeAccents = (str) => {
 
 const controller = {
     index: (req,res)  => {
-        let productsDestacado = products.filter(product => product.promo === "destacado");
-		let productsOferta = products.filter(product => product.promo === "oferta");
-
-        res.render('home' , {
-			titulo: "Homepage",
-            products,
-			users,  /* linea agregada*/
-            session: req.session,
-			productsDestacado,
-			productsOferta
-
+		db.Products.findAll({
+			where: {
+				promo: "Destacado", 
+				/* promo: "Oferta" */
+			}
 		})
+			.then(products => {
+				res.render('home' , {
+					titulo: "Homepage",
+					products,
+					users, 
+					session: req.session,
+					
+		
+				})
+		  })
+	   
     },
     search: (req,res)  => {
+		let search = req.query.keywords;
+        let searchProduct = search
+    
+        db.Products.findAll({
+            where:{
+                name:{[Op.like]:`%${searchProduct}%`}
+            }
+        })
+        .then(products=>{
+    
+            res.render('result',{
+                products,
+				keyword: req.query.keywords,
+                session:req.session
+                })
+        })
+        .catch((error) => { res.send(error)})
 
-        let searchResult = [];
+       /*  let searchResult = [];
 
 		products.forEach(product => {
 			if(removeAccents(product.name.toLowerCase()).includes(req.query.keywords.toLowerCase())){
@@ -42,7 +60,7 @@ const controller = {
 			keyword: req.query.keywords,
             products,
             session: req.session,
-		});
+		}); */
     }
     
 }

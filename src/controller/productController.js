@@ -27,7 +27,7 @@ module.exports = {
 
           db.Products.findByPk(productId)
           .then(product => {
-            res.render('products/productDetail', { product, session: req.session, })
+               res.render('products/productDetail', { product, session: req.session, })
           })
           .catch(error => console.log(error))
      },

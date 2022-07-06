@@ -9,14 +9,14 @@
         <h2>Mostrando resultado de: <%= keyword %></h2>
         <section class="section-ofertas">
             <div class="product-final">
-                <% if(searchResult.length > 0){ %>
+                <% if(products.length > 0){ %>
 
-                    <% searchResult.forEach(product => { %>
+                    <% products.forEach(product => { %>
                         
                         <article class="article-final">
                             <a href="/productos/detail/<%- product.id %>">
                               <div class="cont-imagen">
-                                  <img src="images/<%- product.image %>" alt="ARNES">
+                                <img src="images/products/<%- product.images %>" alt="ARNES">
                               </div>
                               <div class="detail-product">
                                   <h3><%- product.name %></h3>
