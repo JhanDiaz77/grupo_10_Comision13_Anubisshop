@@ -10,17 +10,16 @@ const removeAccents = (str) => {
 
 const controller = {
     index: (req,res)  => {
-		db.Products.findAll({
-			where: {
-				promo: "Destacado", 
-				/* promo: "Oferta" */
-			}
-		})
+		db.Products.findAll()
 			.then(products => {
+				let productosOferta = products.filter((product)=> product.promo === "Oferta" )
+				let productosDestacados = products.filter((product)=> product.promo === "Destacado" )
+				 
+
 				res.render('home' , {
 					titulo: "Homepage",
-					products,
-					users, 
+					productosOferta,
+					productosDestacados,
 					session: req.session,
 					
 		

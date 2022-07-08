@@ -18,8 +18,9 @@
             
             <div class="input-container">
                 <label for="categoria"><h2>Categoría</h2></label>
-                <select name="categoryId" id="categoria" class="category">
-                    <option selected hidden>Seleccione</option>
+                <select name="categoryId" id="categoria" class="category" value="<%= producto.category_id%>">
+                    <option selected hidden> <%- producto.categorias.name %>
+                    </option>
                     <option value="1">Juguetes</option>
                     <option value="2">Accesorios</option>
                     <option value="3">Almohadones, camas</option>
@@ -30,7 +31,8 @@
             <div class="input-container">
                 <label for="promo"><h2>Promo</h2></label>
                 <select name="promo" id="promo" class="category">
-                    <option selected hidden>Seleccione</option>
+                    <option selected hidden><%- producto.promo %>
+                    </option>
                     <option value="Ninguno">Ninguno</option>
                     <option value="Oferta">Oferta</option>
                     <option value="Destacado">Destacado</option>

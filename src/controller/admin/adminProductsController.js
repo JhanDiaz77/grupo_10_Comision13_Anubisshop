@@ -46,9 +46,11 @@ module.exports = {
      productEdit: (req, res)=>{
           let productId = +req.params.id;
 
-          db.Products.findByPk(productId)
+          db.Products.findByPk(productId, {include: [
+            {association: "categorias" },
+          ]})
           .then(producto => {
-            res.render('admin/products/editProductForm', { producto })
+            res.render('admin/products/editProductForm', {producto})
           })
           .catch(error => console.log(error))
 
