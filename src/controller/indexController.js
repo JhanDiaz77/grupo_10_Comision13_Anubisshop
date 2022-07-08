@@ -60,7 +60,15 @@ const controller = {
             products,
             session: req.session,
 		}); */
-    }
+    },
+	contact: (req,res) =>{
+		res.render('contact', {session: req.session})
+
+	},
+	nosotros: (req,res) =>{
+		res.render('nosotros', {session: req.session})
+
+	},
     
 }
 

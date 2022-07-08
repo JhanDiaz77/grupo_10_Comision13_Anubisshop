@@ -1,0 +1,18 @@
+main.contact{
+    height:25rem;
+}
+main.contact h3{
+    margin: 1.5rem;
+    font-weight: bold;
+}
+main.contact p.message{
+    margin: 1.5rem;
+}
+
+main.contact div.info__Contact {
+    margin: 1.5rem;
+}
+main.contact div.info__Contact p a.linkTo_{
+    text-decoration: none;
+    color: black;
+}
