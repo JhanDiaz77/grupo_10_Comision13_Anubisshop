@@ -5,6 +5,10 @@ function qs(element) {
 window.addEventListener("load", () => {
     let $inputName = qs('#name'),
         $nameErrors = qs('#nameErrors'),
+        $inputNumber = qs('#number'),
+        $numberErrors = qs('#numberErrors'),
+        $inputCalle = qs('#calle'),
+        $calleErrors = qs('#calleErrors'),
         $selectProvincias = qs("#province"),
         $selectLocalidades = qs("#city");
 
@@ -46,6 +50,32 @@ window.addEventListener("load", () => {
                 $inputName.classList.remove("is-invalid");
                 $inputName.classList.add("is-valid");
                 $nameErrors.innerHTML = "";
+                break;
+        }
+    })
+    $inputCalle.addEventListener("blur", () => {
+        switch (true) {
+            case !$inputCalle.value.trim():
+                $calleErrors.innerHTML = "Por favor ingrese su calle";
+                $inputCalle.classList.add("is-invalid");
+                break;
+            default: 
+                $inputCalle.classList.remove("is-invalid");
+                $inputCalle.classList.add("is-valid");
+                $calleErrors.innerHTML = "";
+                break;
+        }
+    })
+    $inputNumber.addEventListener("blur", () => {
+        switch (true) {
+            case !$inputNumber.value.trim():
+                $numberErrors.innerHTML = "Por favor ingrese un numero";
+                $inputNumber.classList.add("is-invalid");
+                break;
+            default: 
+                $inputNumber.classList.remove("is-invalid");
+                $inputNumber.classList.add("is-valid");
+                $numberErrors.innerHTML = "";
                 break;
         }
     })
