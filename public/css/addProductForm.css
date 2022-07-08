@@ -23,3 +23,18 @@ button.addSubmit:hover{
     transition: 0.8s;
     width: 100%;
 }
+form.form_editProduct select.promo{
+    height: 2.5rem;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 8px;
+    padding: 0.5rem;
+    outline: none;
+}
+form.form_editProduct div.input-container div.previewImage{
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    display: none;
+}

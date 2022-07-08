@@ -9,31 +9,38 @@
     <section class="addProductSection">
         <h3>Agregar Producto</h3>
 
-        <form action="/admin/add" method="POST"  class="form_editProduct" enctype="multipart/form-data">
+        <form action="/admin/add" method="POST"  class="form_editProduct" enctype="multipart/form-data" id="addProduct-form">
             <div class="input-container">
                 <label for="name"><h2>Nombre del producto</h2></label>
                 <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name">
                 <% if (locals.errors && errors.name) { %>
                     <small class="text-danger"><%= errors.name.msg%></small>
                   <% } %>
+                <span class="error" id="nameProductError" style="color: red"></span>
             </div>
             
             <div class="input-container">
                 <label for="categoria"><h2>Categoría</h2></label>
                 <select name="categoryId" id="categoria" class="category">
+                    <option selected hidden> Seleccione una categoria</option>
                     <option value="1">Juguetes</option>
                     <option value="2">Accesorios</option>
                     <option value="3">Almohadones, camas</option>
                     <option value="4">Alimentos</option>
                     <option value="5">Higiene</option>
                 </select>
+                <span class="error" id="categoryError" style="color: red"></span>
             </div>
             <div class="input-container">
                 <label for="image"><h2>Imagen</h2></label>
+                <div class="previewImage" id="previewImage">
+
+                </div>
                 <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image" name="image">
                 <% if (locals.errors && errors.image) { %>
                     <small class="text-danger"><%= errors.image.msg%></small>
                   <% } %>
+                  <span class="error" id="imageError" style="color: red"></span> 
             </div>
             <div class="input-container">
                 <label for="precio"><h2>Precio</h2></label>
@@ -41,10 +48,12 @@
                 <% if (locals.errors && errors.price) { %>
                     <small class="text-danger"><%= errors.price.msg%></small>
                   <% } %>
+                  <span class="error" id="priceError" style="color: red"></span>
             </div>
             <div class="input-container">
                 <label for="discount"><h2>Descuento</h2></label>
                 <input type="number" name="discount" class="input-style" placeholder="50" id="discount">
+                <span class="error" id="discountError" style="color: red"></span>
             </div>
             <div class="input-container">
                 <label for="promo"><h2>Promo</h2></label>
@@ -53,6 +62,7 @@
                     <option value="Oferta">Oferta</option>
                     <option value="Destacado">Destacado</option>
                 </select>
+                <span class="error" id="promoError" style="color: red"></span>
             </div>
             <div class="input-container">
                 <label for="description"><h2>Descripción</h2></label>
@@ -60,7 +70,10 @@
                 <% if (locals.errors && errors.description) { %>
                     <small class="text-danger"><%= errors.description.msg%></small>
                   <% } %>
+                  <span class="error" id="descriptionError" style="color: red"></span>
             </div>
+            
+            <span style="color:red ;" id="submitErrors"></span>
             <div class="btn-addForm">
                 <button class="addSubmit" type="submit">Crear</button>
             </div> 
