@@ -2,6 +2,7 @@ const{ writeUsers, users } = require('../data')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require("../database/models");
+const fetch = require('node-fetch')
 
 module.exports = {
     login: (req,res)  => {
@@ -100,21 +101,24 @@ module.exports = {
     },
 
     userProfile: (req,res)  => { /* METODO AGREGADO (TODO) */
-
-        db.User.findOne({
-            where: {
-                id: req.session.user.id
-            },
-            include: [{ association: "addresses" }],
-        })
-        .then((user) => {
-            res.render("users/userProfile", {
-                session: req.session,
-                user,
-                titulo: req.session.user.name,
-                
+        
+            db.User.findOne({
+                where: {
+                    id: req.session.user.id
+                },
+                include: [{ association: "addresses" }],
             })
-        })
+            .then((user) => {
+                res.render("users/userProfile", {
+                    session: req.session,
+                    user,
+                    
+                    titulo: req.session.user.name,
+                    
+                })
+            })
+      
+        
     },
     profileEdit: (req, res) => {
 
