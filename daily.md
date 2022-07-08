@@ -146,7 +146,23 @@ _Se informo sobre los avances del  sprint 7_
 
 _Se resolvio algunas detalles pendientes del sprint 6_
 
+### Daily 30/6 🔩
 
+_Se informo sobre los avances del  sprint 7_
+
+_Se resolvio los pendientes del sprint 6_
+
+### Daily 05/7 🔩
+
+_Se informo sobre los avances del  sprint 7_
+
+_Se resolvio pedir ayuda a los profesores por unos errores en home_
+
+### Daily 07/7 🔩
+
+_Se informo sobre los avances del  sprint 7_
+
+_Se les pidio ayuda a los profesores para corregir unos errores en home_
 
 
 
