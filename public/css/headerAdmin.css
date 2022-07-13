@@ -47,6 +47,21 @@ nav.header__nav div.adminControl div ul.mini-menu, nav.header__nav div.adminCont
     padding-left: 15px;
 } 
 
+nav.header__nav div.adminControl div ul.mini-menu.active, nav.header__nav div.adminControl div ul.mini-menu2.active{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color-VioletaClaro);
+    color: white;
+    width: 8rem;
+    padding-left: 15px;
+    
+} 
+nav.header__nav div.adminControl div ul.mini-menu.active, nav.header__nav div.adminControl ul li a.linkto{
+    color: white;
+    font-weight: 100;
+}
+
 /* Media Querie PC */
 @media (min-width: 475px){
     
