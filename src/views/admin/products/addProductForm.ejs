@@ -44,7 +44,7 @@
             </div>
             <div class="input-container">
                 <label for="precio"><h2>Precio</h2></label>
-                <input type="number" name="price" class="input-style" placeholder="300" id="precio">
+                <input type="number" name="price" class="input-style" placeholder="" id="precio">
                 <% if (locals.errors && errors.price) { %>
                     <small class="text-danger"><%= errors.price.msg%></small>
                   <% } %>
@@ -52,7 +52,7 @@
             </div>
             <div class="input-container">
                 <label for="discount"><h2>Descuento</h2></label>
-                <input type="number" name="discount" class="input-style" placeholder="50" id="discount">
+                <input type="number" name="discount" class="input-style" placeholder="" id="discount">
                 <span class="error" id="discountError" style="color: red"></span>
             </div>
             <div class="input-container">

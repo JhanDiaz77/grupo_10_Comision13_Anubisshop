@@ -83,7 +83,6 @@ window.addEventListener("load", () => {
             default:
                 $precio.classList.remove("is-invalid")
                 $priceError.innerHTML = ""
-                /* $precio.style.border = "1px solid ForestGreen" */
                 break;
         }
 
@@ -95,14 +94,16 @@ window.addEventListener("load", () => {
 
             case $discount.value == "":
                 $discountError.innerHTML= ""
-                break;
-        
+                break;       
 
             case $discount.value < 1:
                 $discountError.innerHTML= "Debe ser un valor mayor a 1"
                 $discount.classList.add("is-invalid")
                 break;
-        
+            case $discount.value >= 100:
+                $discountError.innerHTML= "Debe ser un valor menor a 100"
+                $discount.classList.add("is-invalid")
+                break;        
             default:
                 $discountError.innerHTML = ""
                 $discount.style.border = "1px solid ForestGreen"

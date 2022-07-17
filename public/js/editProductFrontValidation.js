@@ -88,7 +88,13 @@ window.addEventListener("load", () => {
     
                 case $discount.value < 1:
                     $discount_Error.innerHTML= "Debe ser un valor mayor a 1"
+                    $discount.classList.add("is-invalid")
                     break;
+
+                case $discount.value >= 100:
+                    $discountError.innerHTML= "Debe ser un valor menor a 100"
+                    $discount.classList.add("is-invalid")
+                break;
             
                 default:
                     $discount_Error.innerHTML = ""
