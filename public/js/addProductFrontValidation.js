@@ -106,7 +106,7 @@ window.addEventListener("load", () => {
                 break;        
             default:
                 $discountError.innerHTML = ""
-                $discount.style.border = "1px solid ForestGreen"
+                
                 break;
         }
     })

@@ -1,16 +1,16 @@
 main.contact{
-    height:25rem;
+    margin: 0.5rem;
 }
 main.contact h3{
-    margin: 1.5rem;
+    margin: 1rem;
     font-weight: bold;
 }
 main.contact p.message{
-    margin: 1.5rem;
+    margin: 1rem;
 }
 
 main.contact div.info__Contact {
-    margin: 1.5rem;
+    margin: 1rem;
 }
 main.contact div.info__Contact p a.linkTo_{
     text-decoration: none;
