@@ -3,8 +3,7 @@ function qs(element) {
 }
 
 window.addEventListener("load", () => {
-    let $inputName = 
-    $email = qs('#email'),
+    let $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#pass'),
     $passErrors = qs('#passErrors'),
@@ -37,7 +36,7 @@ window.addEventListener("load", () => {
                 $pass.classList.add('is-invalid')
                 break;
            case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe tener: entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                $passErrors.innerHTML = 'Contraseña incorrecta';
                 $pass.classList.add('is-invalid')
                 break;     
             default:
@@ -57,7 +56,7 @@ window.addEventListener("load", () => {
                 if(elementsForm[index].value == ""
                  || elementsForm[index].classList.contains("is-invalid")){
                     elementsForm[index].classList.add("is-invalid");
-                    submitErrors.innerHTML = "Hay errores en el formulario"
+                    submitErrors.innerHTML = "Su Email o contraseña son incorrecto"
                     errores = true;
                 }
             } 
