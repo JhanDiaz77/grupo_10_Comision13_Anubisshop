@@ -12,7 +12,7 @@
         <form action="/admin/add" method="POST"  class="form_editProduct" enctype="multipart/form-data" id="addProduct-form">
             <div class="input-container">
                 <label for="name"><h2>Nombre del producto</h2></label>
-                <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name">
+                <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name" value="<%= locals.old && old.name %>" >
                 <% if (locals.errors && errors.name) { %>
                     <small class="text-danger"><%= errors.name.msg%></small>
                   <% } %>
@@ -36,7 +36,7 @@
                 <div class="previewImage" id="previewImage">
 
                 </div>
-                <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image" name="image">
+                <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image" >
                 <% if (locals.errors && errors.image) { %>
                     <small class="text-danger"><%= errors.image.msg%></small>
                   <% } %>
@@ -44,7 +44,7 @@
             </div>
             <div class="input-container">
                 <label for="precio"><h2>Precio</h2></label>
-                <input type="number" name="price" class="input-style" placeholder="" id="precio">
+                <input type="number" name="price" class="input-style" placeholder="" id="precio" value="<%= locals.old && old.price %>" >
                 <% if (locals.errors && errors.price) { %>
                     <small class="text-danger"><%= errors.price.msg%></small>
                   <% } %>
@@ -52,7 +52,7 @@
             </div>
             <div class="input-container">
                 <label for="discount"><h2>Descuento</h2></label>
-                <input type="number" name="discount" class="input-style" placeholder="" id="discount">
+                <input type="number" name="discount" class="input-style" placeholder="" id="discount" value="<%= locals.old && old.discount %>" >
                 <span class="error" id="discountError" style="color: red"></span>
             </div>
             <div class="input-container">
@@ -66,7 +66,7 @@
             </div>
             <div class="input-container">
                 <label for="description"><h2>Descripción</h2></label>
-                <textarea name="description" class="input-style" id="description" cols="30" rows="10" style="height: 60px;"></textarea>
+                <textarea name="description" class="input-style" id="description" cols="30" rows="10" style="height: 60px;"><%= locals.old && old.description%></textarea>
                 <% if (locals.errors && errors.description) { %>
                     <small class="text-danger"><%= errors.description.msg%></small>
                   <% } %>

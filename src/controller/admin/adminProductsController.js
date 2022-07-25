@@ -39,7 +39,8 @@ module.exports = {
           }else{
                res.render('admin/products/addProductForm', { 
                titulo: "Agregar producto",
-               errors: errors.mapped()
+               errors: errors.mapped(),
+               old: req.body
                })
           } 
      },

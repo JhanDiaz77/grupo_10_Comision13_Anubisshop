@@ -18,7 +18,7 @@
 
             <div class="input-container">
                 <label for="name"><h2>Nombre y Apellido</h2></label>
-                <input type="text" name="name" id = "name" class="input-style" placeholder="Ej: Juan" id="name" >
+                <input type="text" name="name" id = "name" class="input-style" placeholder="Ej: Juan" value="<%= locals.old && old.name %>" >
                 <% if (locals.errors && errors.name) { %>
                     <small class="text-danger"><%= errors.name.msg %></small>
                 <% } %>
@@ -28,7 +28,7 @@
 
             <div class="input-container">
                 <label for="email"><h2>E-mail</h2></label>
-                <input type="email" name="email" id="email" class="input-style" placeholder="Ingrese su E-mail" id="email">
+                <input type="email" name="email" id="email" class="input-style" placeholder="Ingrese su E-mail" value="<%= locals.old && old.email%>">
                 <% if (locals.errors && errors.email) { %>
                     <small class="text-danger"><%= errors.email.msg %></small>
                 <% } %>
@@ -75,7 +75,6 @@
             <div class="btn-container-box">
                 <button class="btn-register" type="reset">Limpiar</button>
                 <button class="btn-register" type="submit">Registrarme</button>
-                <span id="submitErros" style="color: red"></span>
             </div> 
             
         </form>
