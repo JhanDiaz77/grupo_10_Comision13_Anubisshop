@@ -30,13 +30,13 @@ router.delete('/list/eliminar/:id', adminProductsController.productDelete)
 
 /* (CRUS) RUTAS ADMIN CATEGORIAS */
 /* GET - Listado de productos */
-router.get('/categorias/lista', adminCategoriesController.categoryList)
+router.get('/categorias/lista', userSession, adminCheck , adminCategoriesController.categoryList)
 /* GET - para mostrar formulario de agregar */
-router.get('/categorias/agregar', adminCategoriesController.categoryAdd)
+router.get('/categorias/agregar', userSession, adminCheck , adminCategoriesController.categoryAdd)
 /* POST - para procesar el formulario de agregar */
 router.post('/categorias/lista', adminCategoriesController.createCategory) /* es la misma ruta de la lista ya que este metodo lo que va a hacer es redireccionar a esa vista con los datos ya actualizados, es decir con una nueva categoria agregada */
 /* GET - mostrar formulario Editar categoria */
-router.get('/categorias/editar/:id', adminCategoriesController.categoryEdit);
+router.get('/categorias/editar/:id', userSession, adminCheck , adminCategoriesController.categoryEdit);
 /* PUT - para procesar el formulario Edit (ACTUALIZAR LA INFO) */
 router.put('/categorias/:id', adminCategoriesController.categoryUpdate);
 
