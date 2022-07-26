@@ -12,7 +12,11 @@
             <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
 
             <div class="header__carrito"> <a href="/productos/cart"><i style="color: black;" class="fa-solid fa-cart-shopping"></i> </a></div>
-            <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a></div>
+            <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                <% if (typeof session.user != "undefined") { %>
+                    <div class="punto-verde"></div>
+                <% } %> 
+            </div>
         
         </div>  
         

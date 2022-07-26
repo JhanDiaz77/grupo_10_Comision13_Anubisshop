@@ -13,12 +13,13 @@ module.exports = {
       })
         .then(product => {
           res.render('admin/products/listProducts', {
-               productos: product
+               productos: product,
+               session: req.session,
           })
       })
      },
      productAdd: (req, res) => {
-        res.render('admin/products/addProductForm')
+        res.render('admin/products/addProductForm',{session: req.session,})
      },
      productCreate:(req ,res)  => {
           let errors = validationResult(req);
@@ -40,7 +41,8 @@ module.exports = {
                res.render('admin/products/addProductForm', { 
                titulo: "Agregar producto",
                errors: errors.mapped(),
-               old: req.body
+               old: req.body,
+               session: req.session,
                })
           } 
      },
@@ -51,7 +53,10 @@ module.exports = {
             {association: "categorias" },
           ]})
           .then(producto => {
-            res.render('admin/products/editProductForm', {producto})
+            res.render('admin/products/editProductForm', {
+              producto,
+              session: req.session,
+            })
           })
           .catch(error => console.log(error))
 
@@ -86,7 +91,8 @@ module.exports = {
                 titulo: "Editar producto",
                 producto,
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session,
             })
           })
           .catch(error => console.log(error))

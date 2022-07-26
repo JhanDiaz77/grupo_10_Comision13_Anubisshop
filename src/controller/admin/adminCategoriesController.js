@@ -6,12 +6,15 @@ module.exports={
       db.Category.findAll()
       .then(categories => {
         res.render('admin/categories/listCategory', {
-           categorias: categories
+           categorias: categories,
+           session: req.session,
         })
       })
     },
     categoryAdd: (req, res) => {
-        res.render('admin/categories/addCategory')
+        res.render('admin/categories/addCategory', {
+          session: req.session,
+        })
     },
     createCategory: (req ,res)  => {
       db.Category.create({
@@ -28,7 +31,7 @@ module.exports={
 
       db.Category.findByPk(idCategory)
         .then( (categoria) => {
-          res.render('admin/categories/editCategory', {categoria})
+          res.render('admin/categories/editCategory', {categoria, session: req.session})
           })
           .catch(error => console.log(error))
     },
