@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
     let $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#pass'),
+    $formLogin = qs('#formLogin'),
+    $submitLoginErrors = qs('#submitLoginErrors'),
     $passErrors = qs('#passErrors'),
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
@@ -46,25 +48,26 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-        $form.addEventListener("submit", function(event) {
 
-            event.preventDefault()
-            let elementsForm = this.elements;
-            let errores = false;
-        
-            for (let index = 0; index < elementsForm.length - 1; index++) {
-                if(elementsForm[index].value == ""
-                 || elementsForm[index].classList.contains("is-invalid")){
-                    elementsForm[index].classList.add("is-invalid");
-                    submitErrors.innerHTML = "Su Email o contraseña son incorrecto"
-                    errores = true;
-                }
-            } 
-            if(!errores){
-                alert("Validado!")
-                $form.submit()
+    $formLogin.addEventListener("submit", function(event) {
+
+        event.preventDefault()
+        let elementsForm = this.elements;
+        let errores = false;
+    
+        for (let index = 0; index < elementsForm.length - 1; index++) {
+            if(elementsForm[index].value == ""
+                || elementsForm[index].classList.contains("is-invalid")){
+                elementsForm[index].classList.add("is-invalid");
+                $submitLoginErrors.innerHTML = "Su Email o contraseña son incorrecto"
+                errores = true;
             }
-        })         
+        } 
+        if(!errores){
+            alert("Validado!")
+            $formLogin.submit()
+        }
+    })         
    
 
 })
