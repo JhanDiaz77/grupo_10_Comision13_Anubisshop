@@ -54,14 +54,32 @@
                 <% } %> 
                 
             </ul>
-            <div class="end-nav">
-                <div class="user-end-nav">
-                    <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+            <% if (typeof session.user == "undefined") { %>
+                
+                <div class="end-nav">
+    
+                    <div class="iniciarsesion">
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i>Iniciar sesión</a>
+                    </div>
+                    <div class="crearcuenta">
+                        <a href="/usuarios/register">Crear cuenta</a>
+                    </div>
+    
+    
+                    <!-- <div class="user-end-nav">
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <p><a href="">Iniciar sesión</a></p>
+                    <p><a href="">/ Crear cuenta</a></p> -->
+    
                 </div>
-                <p><a href="">Iniciar sesión</a></p>
-                <p><a href="">/ Crear cuenta</a></p>
+                
+            <% } else{ %> 
+                <div class="end-nav">
+                    <a href="/usuarios/perfil/<%-session.user.id %>">Ir a mi perfil</a>
 
-            </div>
+                </div>
+            <% } %> 
         </nav>
     </div>
    
