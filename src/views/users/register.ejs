@@ -9,11 +9,11 @@
 
     <section class="register">
         <h3>Crear cuenta</h3>
-        <form action="/usuarios/register" method="POST" class="register" enctype="multipart/form-data">
+        <form action="/usuarios/register" method="POST" id="form" class="register" enctype="multipart/form-data">
 
             <div class="input-avatarcontainer">
-                <label for="avatar" class="avatar__image"><h4> <i class="fa-solid fa-user"></i></h4></label>
-                <input type="file" name="avatar" class="form__image" placeholder="Seleccione un archivo" id="image">
+                <label for="avatar" class="avatar__image" id="avatar__image"><h4> <i class="fa-solid fa-user"></i></h4></label>
+                <input type="file" name="avatar" class="form__image" placeholder="Seleccione un archivo" id="formFile">
             </div>
 
             <div class="input-container">
@@ -72,6 +72,7 @@
                 <% } %>
                 <span class="error" id="termsErrors" style="color: red"></span>
             </div>
+            <small id="submitErrors" style="color: red"></small>
             <div class="btn-container-box">
                 <button class="btn-register" type="reset">Limpiar</button>
                 <button class="btn-register" type="submit">Registrarme</button>

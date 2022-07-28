@@ -81,8 +81,8 @@ header div.header-buscador input.busqueda{
 
 header div.header-buscador div.search-bar button{
     border-style: none;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: var(--color-Amarillo);
     width: 2.5rem;
     height: 1.9rem;
     /* padding-bottom: 2px; */
@@ -95,6 +95,11 @@ header div.header-buscador div.search-bar button{
     position: absolute;
     right: 0;
     top: 0;
+    transition: 0.3s ease-in;
+}
+header div.header-buscador div.search-bar button:hover{
+    background-color: var(--color-VioletaClaro);
+    color: white;
 }
 
 div.header_nav-burger {

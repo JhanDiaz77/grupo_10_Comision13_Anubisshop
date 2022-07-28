@@ -12,11 +12,11 @@ window.addEventListener("load", () => {
     $passErrors = qs('#passErrors'),
     $pass2 = qs('#pass2'),
     $pass2Errors = qs('#pass2Errors'),
-    $terms = qs('#flexCheckDefault'),
+    $terms = qs('#terms'),
     $termsErrors = qs('#termsErrors'),
     $file = qs('#formFile'),
     $fileErrors = qs('#fileErrors'),
-    $imgPreview = qs('#img-preview'),
+    $imgPreview = qs('#avatar__image'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
@@ -75,6 +75,7 @@ window.addEventListener("load", () => {
                 break;
         }
     })
+    
     $pass2.addEventListener('blur', function(){
         switch (true) {
             case !$pass2.value.trim():
@@ -91,40 +92,44 @@ window.addEventListener("load", () => {
                 $pass2Errors.innerHTML = ""
                 break;
         }
-      
-        $terms.addEventListener('click', function (){
-            $terms.value = "on"
-            $terms.classList.toggle('is-valid')
-            $terms.classList.remove('is-invalid')
-            $termsErrors.innerHTML = ""
-        })
-        $form.addEventListener("submit", function(event) {
+    })
 
-            event.preventDefault()
-            let elementsForm = this.elements;
-            let errores = false;
-        
-            for (let index = 0; index < elementsForm.length - 1; index++) {
-                if(elementsForm[index].value == ""
-                && elementsForm[index].type !== "file"
-                || elementsForm[index].classList.contains("is-invalid")){
-                    elementsForm[index].classList.add("is-invalid");
-                    submitErrors.innerHTML = "Hay errores en el formulario"
-                    errores = true;
-                }
-            }
+    $terms.addEventListener('click', function (){
+        $terms.value = "on"
+        $terms.classList.toggle('is-valid')
+        $terms.classList.remove('is-invalid')
+        $termsErrors.innerHTML = ""
+    })
+
+    $form.addEventListener("submit", function(event) {
+
+        event.preventDefault()
+        let elementsForm = this.elements;
+        let errores = false;
+        console.log(elementsForm)
     
-            if(!$terms.checked){
-                $terms.classList.add("is-invalid");
-                $termsErrors.innerHTML = "Debes los términos y condiciones";
+        for (let index = 0; index < elementsForm.length - 2; index++) { // El -2 omite los dos botones (reset, submit)
+            if(elementsForm[index].value == ""
+            && elementsForm[index].type !== "file"
+            && elementsForm[index].type !== "tel"
+            || elementsForm[index].classList.contains("is-invalid")){
+                elementsForm[index].classList.add("is-invalid");
+                submitErrors.innerHTML = "Hay errores en el formulario"
+                errores = true;
             }
-    
-            if(!errores){
-                alert("Validado!")
-                $form.submit()
-            }
-        })
-        $file.addEventListener('change', 
+        }
+
+        if(!$terms.checked){
+            $terms.classList.add("is-invalid");
+            $termsErrors.innerHTML = "Debes los términos y condiciones";
+        }
+
+        if(!errores){
+            $form.submit()
+        }
+    })
+
+    $file.addEventListener('change', 
     function fileValidation(){
         let filePath = $file.value, //Capturo el valor del input
             allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
@@ -147,9 +152,5 @@ window.addEventListener("load", () => {
             }
         }
     })
-
-    
-    })
-
 
 })
