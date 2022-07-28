@@ -137,7 +137,7 @@ h4.sectionTitle{
 
 /* Media Queries */
 /* Tablet */
-@media (min-width: 361px){
+@media (min-width: 463px){
     .container_carrusel{
         display:contents;
     }

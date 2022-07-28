@@ -45,14 +45,14 @@ header .header__container div.header__user{
      
 }
 div.search-bar{
-    height: 1.5rem;
-    width: 60%;
-    background-color:white ;
+    height: 1.9rem; /* 1.8rem */
+    width: 61%;
+     /*background-color:white;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -66,13 +66,17 @@ form.search-bar-barra {
 
 header div.header-buscador input.busqueda{
     outline: none;
+    background-color: white;
     border-style: none;
     padding-left: 5px;
     width: 100%;
+    height: 1.9rem;
     font-size: var(--paragraphs);
     font-family: var(--fuente-roboto);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 header div.header-buscador div.search-bar button{
@@ -80,10 +84,10 @@ header div.header-buscador div.search-bar button{
     background-color: black;
     color: white;
     width: 2.5rem;
-    height: 1.5rem;
+    height: 1.9rem;
     /* padding-bottom: 2px; */
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -170,6 +174,44 @@ header nav.header__nav .end-nav a{
     color: black
 }
 
+/* NUEVO END NAV */
+header .header_nav-burger .header__nav .end-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header_nav-burger .header__nav .end-nav div.iniciarsesion{
+    margin: 0.7rem;
+}
+header .header_nav-burger .header__nav .end-nav div.iniciarsesion a{
+    padding: 0.5rem;
+}
+header .header_nav-burger .header__nav .end-nav div.iniciarsesion a i{
+    margin: 0.3rem;
+    color: var(--color-Amarillo);
+    background-color: black;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+
+
+header .header_nav-burger .header__nav .end-nav div.crearcuenta{
+    margin: 0.7rem;
+}
+header .header_nav-burger .header__nav .end-nav div.crearcuenta a{
+    padding: 0.5rem;
+}
+
+header .header_nav-burger .header__nav .end-nav a{
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+/* _________________ */
+
 /* FIN HEADER */
 
 /* Animations */
@@ -205,13 +247,22 @@ header .header_nav-burger.active {
         margin: 10px 20px;
         border-radius: 50%;
     }
-    header div.search-bar{
+   /*  header div.search-bar{
         position: absolute;
         top: 29px;
         right: 8.9rem;
         left: 19%;
         height: 2.3rem;
 
+    } */
+
+    header div.search-bar{
+        position: absolute;
+        top: 1.6rem;
+        right: 8.9rem;
+        left: 20%;
+        width: 50%;
+        height: 2.5rem;
     }
     header div.header-buscador input.busqueda{
         outline: none;
@@ -219,8 +270,10 @@ header .header_nav-burger.active {
         height: 2.3rem;
         font-size: 15px;
         padding-left: 5px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 35px;
+        border-top-right-radius: 35px;
     }
     header div.header-buscador div.search-bar button{
         width: 2.5rem;
@@ -306,6 +359,7 @@ header .header_nav-burger.active {
         font-size: 11px;
         margin: 5px;
         padding: 5px;
+        border-radius: 4px;
         background-color: var(--color-VioletaClaro);
         height: 24px;
         width: 100%;
@@ -318,7 +372,8 @@ header .header_nav-burger.active {
         transition: all 0.3s ease-in;
     }
 
-    header nav.header__nav .end-nav {
+   
+    header .header_nav-burger .header__nav .end-nav{
         display: none;
     }
 
@@ -332,24 +387,25 @@ header .header_nav-burger.active {
 
 
 
-@media (min-width: 769px){
+@media (min-width: 770px){
     /* header */
     header img{
-        width: 100px;
-        margin: 10px 30px;
+        width: 120px;
+        margin: 20px 15px 5px 40px;
         border-radius: 50%;
     }
 
     header div.search-bar{
         position: absolute;
-        top: 2rem;
+        top: 3rem;
         right: 8.9rem;
-        left: 20%;
+        left: 22%;
         width: 50%;
         height: 2.5rem;
     }
+    
     header div.header-buscador div.search-bar button{
-        height: 2.5rem;  
+        height: 2.3rem;  
     }
     header .header__container div.header__carrito{
         position: relative;
@@ -372,6 +428,7 @@ header .header_nav-burger.active {
         justify-content: space-evenly;
         align-items: center;  
         flex-direction: row;
+        padding: 5px 10px 0px 10px;
         top: auto;
         left: auto;
         position: static;

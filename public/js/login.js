@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
             }
         } 
         if(!errores){
-            alert("Validado!")
+            
             $formLogin.submit()
         }
     })         
