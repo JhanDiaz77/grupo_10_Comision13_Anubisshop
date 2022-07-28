@@ -37,6 +37,7 @@ window.addEventListener("load", () => {
             default: 
             
                 $name.classList.remove("is-invalid")
+                $name.classList.add("is-valid")
                 $nameProductError.innerHTML = ""
         }
 
@@ -54,6 +55,7 @@ window.addEventListener("load", () => {
         
             default:
                 $categoria.classList.remove("is-invalid");
+                $categoria.classList.add("is-valid");
                 $categoryError.innerHTML = ""
                 break;
         }
@@ -82,6 +84,7 @@ window.addEventListener("load", () => {
         
             default:
                 $precio.classList.remove("is-invalid")
+                $precio.classList.add("is-valid")
                 $priceError.innerHTML = ""
                 break;
         }
@@ -105,6 +108,9 @@ window.addEventListener("load", () => {
                 $discount.classList.add("is-invalid")
                 break;        
             default:
+                $discount.classList.remove("is-invalid")
+                $discount.classList.add("is-valid")
+
                 $discountError.innerHTML = ""
                 
                 break;
@@ -135,8 +141,10 @@ window.addEventListener("load", () => {
                 break;
             
             default: 
-                $descriptionError.innerHTML = ""
-                $description.classList.remove("is-invalid")
+            $description.classList.remove("is-invalid")
+            $description.classList.add("is-valid")
+            $descriptionError.innerHTML = ""
+            break;
         }
     })
 

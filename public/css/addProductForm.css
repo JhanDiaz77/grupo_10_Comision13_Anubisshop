@@ -38,3 +38,10 @@ form.form_editProduct div.input-container div.previewImage{
     margin-bottom: 0.5rem;
     display: none;
 }
+
+.is-invalid {
+    border: 1px solid red !important;
+}
+.is-valid{
+    border: 3px solid forestgreen !important;
+}
