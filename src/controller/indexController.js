@@ -25,6 +25,7 @@ const controller = {
 		
 				})
 		  })
+		  .catch((error) => { res.send(error)})
 	   
     },
     search: (req,res)  => {

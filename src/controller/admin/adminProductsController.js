@@ -19,7 +19,16 @@ module.exports = {
       })
      },
      productAdd: (req, res) => {
-        res.render('admin/products/addProductForm',{session: req.session,})
+        db.Category.findAll()
+        .then((categories) => {
+        res.render('admin/products/addProductForm', {
+            titulo: "Agregar producto",
+            session: req.session,
+            categories
+          })
+        })
+        .catch((error) => res.send(error))
+
      },
      productCreate:(req ,res)  => {
           let errors = validationResult(req);
@@ -53,10 +62,14 @@ module.exports = {
             {association: "categorias" },
           ]})
           .then(producto => {
-            res.render('admin/products/editProductForm', {
-              producto,
-              session: req.session,
+            db.Category.findAll().then((categories) => {
+              res.render('admin/products/editProductForm', {
+                producto,
+                categories,
+                session: req.session,
+              })
             })
+            .catch(error => console.log(error))
           })
           .catch(error => console.log(error))
 

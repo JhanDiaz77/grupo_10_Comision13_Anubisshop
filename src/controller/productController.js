@@ -20,6 +20,7 @@ module.exports = {
                     session: req.session,
                })
         })
+        .catch((error) => { res.send(error)})
      
     },
     vistaJuguete: (req,res)  => {
@@ -30,13 +31,14 @@ module.exports = {
           where: [
                {category_id: 1}
           ]
-        })
+         })
           .then(products => {
                res.render('products/vistaJuguetes', {
                     products,
                     session: req.session,
                })
-        })
+         })
+         .catch((error) => { res.send(error)})
      
     },
     vistaAccesorio: (req,res)  => {
@@ -47,13 +49,14 @@ module.exports = {
           where: [
                {category_id: 2}
           ]
-        })
+         })
           .then(products => {
                res.render('products/vistaAccesorios', {
                     products,
                     session: req.session,
                })
-        })
+         })
+         .catch((error) => { res.send(error)})
      
     },
     vistaCamas: (req,res)  => {
@@ -64,13 +67,14 @@ module.exports = {
           where: [
                {category_id: 3}
           ]
-        })
+         })
           .then(products => {
                res.render('products/vistaCamas', {
                     products,
                     session: req.session,
                })
-        })
+         })
+         .catch((error) => { res.send(error)})
      
     },
     vistaComida: (req,res)  => {
@@ -81,13 +85,14 @@ module.exports = {
           where: [
                {category_id: 4}
           ]
-        })
+         })
           .then(products => {
                res.render('products/vistaComida', {
                     products,
                     session: req.session,
                })
-        })
+         })
+         .catch((error) => { res.send(error)})
      
     },
     vistaHigiene: (req,res)  => {
@@ -98,13 +103,14 @@ module.exports = {
           where: [
                {category_id: 5}
           ]
-        })
+         })
           .then(products => {
                res.render('products/vistaHigiene', {
                     products,
                     session: req.session,
                })
-        })
+         })
+         .catch((error) => { res.send(error)})
      
     },
     

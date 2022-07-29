@@ -23,11 +23,9 @@
                 <label for="categoria"><h2>Categoría</h2></label>
                 <select name="categoryId" id="categoria" class="category">
                     <option selected hidden> Seleccione una categoria</option>
-                    <option value="1">Juguetes</option>
-                    <option value="2">Accesorios</option>
-                    <option value="3">Almohadones, camas</option>
-                    <option value="4">Alimentos</option>
-                    <option value="5">Higiene</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%- category.id %>"><%- category.name %></option>
+                    <% }) %> 
                 </select>
                 <span class="error" id="categoryError" style="color: red"></span>
             </div>
