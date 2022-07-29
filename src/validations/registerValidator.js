@@ -23,8 +23,8 @@ let validateRegister = [
     }),
     check("password")
         .notEmpty().withMessage("Ingrese una contraseña")
-        .isLength({min: 8}).withMessage("La contraseña debe tener por lo menos 6 caracteres")
-        .isAlphanumeric().withMessage("La contraseña debe tener números y letras"), 
+        .isLength({min: 6}).withMessage("La contraseña debe tener por lo menos 6 caracteres")
+        .isAlphanumeric().withMessage("La contraseña debe tener números y mayusculas"), 
     check("password2")
         .notEmpty().withMessage("Reingrese su contraseña"),
 
