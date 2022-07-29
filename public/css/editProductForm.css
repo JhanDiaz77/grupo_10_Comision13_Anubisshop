@@ -105,6 +105,14 @@ button.reset:hover{
     background-color: var(--color-VioletaOscuro);
     transition: 0.5s;
 }
+
+.is-invalid {
+    border: 1px solid red !important;
+}
+.is-valid{
+    border: 3px solid forestgreen !important;
+}
+
 @media (min-width: 420px){
     form.form_editProduct{
         width: 380px;

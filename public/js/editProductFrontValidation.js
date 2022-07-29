@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
         $image = qs("#image_"),
         $precio = qs("#precio_"),
         $discount = qs("#discount_"),
-        $description = qs("#description_"),
+        $description = qs("#descriptionn"),
         
         $forms= qs("#editProduct-form"),
         $submit_Error = qs ("#submit_Error")
@@ -36,6 +36,8 @@ window.addEventListener("load", () => {
                     $inputName.classList.add("is-invalid");
                     break;
                 default: 
+                    $name.classList.remove("is-invalid")
+                    $name.classList.add("is-valid")
                     $nameProduct_Error.innerHTML = ""
             }
     
@@ -50,6 +52,8 @@ window.addEventListener("load", () => {
                     break;
             
                 default:
+                    $categoria.classList.remove("is-invalid")
+                    $categoria.classList.add("is-valid")
                     $category_Error.innerHTML = "";
                     break;
             }
@@ -67,11 +71,13 @@ window.addEventListener("load", () => {
             
                 case $precio.value < 1:
                     $price_Error.innerHTML= "Debe ser un valor mayor a 1"
+                    $precio.classList.add("is-invalid")
                     break;
             
                 default:
+                    $precio.classList.remove("is-invalid")
+                    $precio.classList.add("is-valid")
                     $price_Error.innerHTML = ""
-                    /* $precio.style.border = "1px solid ForestGreen" */
                     break;
             }
     
@@ -98,7 +104,6 @@ window.addEventListener("load", () => {
             
                 default:
                     $discount_Error.innerHTML = ""
-                    $discount.style.border = "1px solid ForestGreen"
                     break;
             }
         })
@@ -121,13 +126,15 @@ window.addEventListener("load", () => {
 
             switch (true) {
                 case !$description.value.trim(): /* evalua si el campo esta vacio */
-                    $description_Error.innerHTML = "El campo es requerido";
-                    $name.classList.add("is-invalid");/* agregarle estilos a esto */
+                    $descriptionError.innerHTML = "El campo es requerido";
+                    $description.classList.add("is-invalid");/* agregarle estilos a esto */
                     break;
                 
                 default: 
-                    $description_Error.innerHTML = ""
-                    
+                $description.classList.remove("is-invalid")
+                $description.classList.add("is-valid")
+                $descriptionError.innerHTML = ""
+                break;
             }
         })
 

@@ -77,6 +77,15 @@ div.btn-container, button.submit:hover{
 section.login form i{
     font-style: normal;   
 }
+
+
+.is-invalid {
+    border: 1px solid red !important;
+}
+.is-valid{
+    border: 3px solid forestgreen !important;
+}
+
 /* FIN DE FORM LOGIN */
 
 /* MEDIA QUERIES */
