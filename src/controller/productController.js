@@ -11,10 +11,96 @@ module.exports = {
      db.Products.findAll({
           include: [
             {association: "categorias" },
-          ]
+          ],
+         
         })
           .then(products => {
                res.render('products/listProducts', {
+                    products,
+                    session: req.session,
+               })
+        })
+     
+    },
+    vistaJuguete: (req,res)  => {
+     db.Products.findAll({
+          include: [
+            {association: "categorias" },
+          ],
+          where: [
+               {category_id: 1}
+          ]
+        })
+          .then(products => {
+               res.render('products/vistaJuguetes', {
+                    products,
+                    session: req.session,
+               })
+        })
+     
+    },
+    vistaAccesorio: (req,res)  => {
+     db.Products.findAll({
+          include: [
+            {association: "categorias" },
+          ],
+          where: [
+               {category_id: 2}
+          ]
+        })
+          .then(products => {
+               res.render('products/vistaAccesorios', {
+                    products,
+                    session: req.session,
+               })
+        })
+     
+    },
+    vistaCamas: (req,res)  => {
+     db.Products.findAll({
+          include: [
+            {association: "categorias" },
+          ],
+          where: [
+               {category_id: 3}
+          ]
+        })
+          .then(products => {
+               res.render('products/vistaCamas', {
+                    products,
+                    session: req.session,
+               })
+        })
+     
+    },
+    vistaComida: (req,res)  => {
+     db.Products.findAll({
+          include: [
+            {association: "categorias" },
+          ],
+          where: [
+               {category_id: 4}
+          ]
+        })
+          .then(products => {
+               res.render('products/vistaComida', {
+                    products,
+                    session: req.session,
+               })
+        })
+     
+    },
+    vistaHigiene: (req,res)  => {
+     db.Products.findAll({
+          include: [
+            {association: "categorias" },
+          ],
+          where: [
+               {category_id: 5}
+          ]
+        })
+          .then(products => {
+               res.render('products/vistaHigiene', {
                     products,
                     session: req.session,
                })

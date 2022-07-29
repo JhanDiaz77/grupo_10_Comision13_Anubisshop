@@ -1,4 +1,37 @@
 /* Vista de tarjeta */
+div.listCatProd {
+    margin: 1rem;
+}
+div.listCatProd button.btn-listCatProd {
+    background-color: var(--color-VioletaClaro);
+    border-radius: 5px;
+    font-size: 1rem ;
+    color: white;
+    height: 2rem;
+    padding: 5px 15px;
+    margin: 0.5rem;
+    width: 15rem;
+    border: none;
+}
+div.listCatProd ul.selectCat{
+    display: none;
+}
+div.listCatProd ul.selectCat.active {
+    display: inline-block;
+}
+div.listCatProd ul.selectCat li {
+    width: 7rem;
+    background-color: var(--color-VioletaClaro);
+    text-align: center;
+}
+div.listCatProd ul.selectCat li a.selecLi {
+    
+    font-size: 1rem ;
+    color: white;
+    height: 2rem;
+    width: 100%;
+    text-decoration: none;
+}
 
 h2.listadoProductos{
     margin: 1rem;
@@ -162,8 +195,21 @@ main div.product-final div.boton-press div.boton-one button:hover{
         flex-wrap: wrap;
         justify-content: space-evenly;
 
-     }
+    }
+    div.listCatProd {
+        display: flex;
+    }
+    div.listCatProd ul.selectCat.active {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+    div.listCatProd ul.selectCat li {
+        margin: 0.4rem 0.3rem;
+    }
     
+
 }
 
 @media (min-width: 950px){

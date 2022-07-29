@@ -6,6 +6,11 @@ const userSession = require('../middlewares/userSession');
 
 /* Todos los productos */
 router.get('/', productController.index);
+router.get('/juguetes', productController.vistaJuguete);
+router.get('/accesorios', productController.vistaAccesorio);
+router.get('/camas', productController.vistaCamas);
+router.get('/comidas', productController.vistaComida);
+router.get('/higiene', productController.vistaHigiene);
 
 /* Detalle de productos */
 router.get('/detail/:id', productController.detail);
