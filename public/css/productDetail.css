@@ -65,15 +65,15 @@ main div.detalle-producto div.contenido-text section.detalles p input {
 main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     margin: 0.5rem 0;
 }
 
-main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito button {
+main div.detalle-producto div.contenido-text section.detalles div.añadir-carrito .addCart {
     border-radius: 10px;
-    padding: 0.2rem;
-    width: 10rem;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
     height: 2.5rem;
     background-color: #292BFD;
     color: white;
