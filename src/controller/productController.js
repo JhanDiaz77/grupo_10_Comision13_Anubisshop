@@ -119,7 +119,10 @@ module.exports = {
 
           db.Products.findByPk(productId)
           .then(product => {
-               res.render('products/productDetail', { product, session: req.session, })
+               db.Products.findAll({where: { promo: "Destacado"}}).then( (productosDestacados) => {
+                    res.render('products/productDetail', { product, session: req.session, productosDestacados})
+               })
+               .catch(error => console.log(error)) 
           })
           .catch(error => console.log(error))
      },
