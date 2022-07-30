@@ -16,3 +16,15 @@ main.contact div.info__Contact p a.linkTo_{
     text-decoration: none;
     color: black;
 }
+
+div.huella{
+    /* display: flex;
+    flex-direction: column; */
+    align-items:stretch ;
+    width: 10rem;
+    height: 7rem;
+}
+div.huella i.huella{
+    color:var(--color-VioletaOscuro);
+    font-size: 5rem;
+}
