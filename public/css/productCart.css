@@ -5,6 +5,9 @@
     font-family: var(--fuente-roboto);
     box-sizing: border-box;
 }
+/* main.mainCart_{
+    margin: 0.5rem;
+} */
 
 div.carrito {
     margin: 1rem;
@@ -36,17 +39,21 @@ div.carrito section.producto {
     position: relative;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0.1rem;
+    padding: 0.3rem;
     margin: 0.3rem 0;
-    box-shadow: 2px 2px 2px 2px rgba(77, 75, 75, 0.2);
+    box-shadow: 0px 1px 3px 3px rgba(77, 75, 75, 0.2);
+    border-radius: 7px;
    /*  border: 1px solid #000; */
 }
 
 div.carrito section.producto div.producto-img {
-    position: relative;
-    max-width: 30%;
-    max-height: 50%;
-    /* border: 1px solid #000; */
+    /* position: relative;*/
+    max-width: 60px;
+    max-height: 50%; 
+    /* border: 1px solid #000;  este no iba*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.carrito section.producto div.producto-img img {
@@ -75,24 +82,29 @@ div.carrito section.producto div.producto-name {
 div.carrito section.producto div.producto-name input {
     width: 2rem;
     height: 1rem;
+    margin-bottom: 5px;
     max-width: 100%;
-    position: relative;
     text-align: center;
 }
 
 
+div.carrito section.producto div.producto-pago .priceProd_{
+ margin: 0px;
+}
 div.carrito section.producto div.producto-pago {
     width: 20%;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     text-align: end;
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 div.carrito section.producto div.producto-pago i {
     font-size: 18px;
+    margin-bottom: 0.5rem;
 }
 
 div.pago div.costo {
@@ -146,7 +158,7 @@ div.pago div.tarjetas div {
     padding: 2px 0; 
 }
 div.pago div.button-vaciar{
-    padding-left: 0.5rem;
+    margin: 1rem;
 }
 
 div.pago div.button-vaciar button{
@@ -160,9 +172,15 @@ div.pago div.button-vaciar button{
 }
 
 div section.producto-recomendados{
+    display: flex;
+    flex-direction: column;
     padding-top: 0.5rem;
     /* border: solid 1px black; */
     width: 100%;
+}
+div section.producto-recomendados h3.product-title{
+    margin: 1rem;
+    font-weight: bold;
 }
 div section.producto-recomendados div.listado-products-rec{
     padding-top: 0.5rem;
@@ -174,20 +192,22 @@ div section.producto-recomendados div.listado-products-rec{
     align-items: center;
 }
 div section.producto-recomendados article.producto-rec{
-    position: relative;
+    /* position: relative; */
   /*   border: solid 1px black; */
-    padding: 0.5rem 0.3rem;
-    width: 100%;
-    max-width: 500px;
+    
+    width: 90%;
     
 }
 div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
     /* border: solid 1px black; */
-    position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
-    width: 100%;
+    width: 90%;
     max-width: 400px;
 }
 
@@ -196,12 +216,16 @@ div section.producto-recomendados article.producto-rec div.detalles-producto div
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.2rem 0.4rem;
+}
+
+div section.producto-recomendados article.producto-rec div.detalles-producto div.text-detalle .info_productt{
+    position: relative;
+    width: 100%;
 }
 
 /* Media querie */
 
-@media (min-width: 730px) {
+@media (min-width: 680px) {
     main div.contenedor-carrito-pago {
         display: flex;
         justify-content: center;
@@ -254,14 +278,13 @@ div section.producto-recomendados article.producto-rec div.detalles-producto div
         display: flex;
         flex-direction: column;
         top: 3rem;
-        padding: 0 1rem;
+        padding: 0.5rem;
     }
 
     div.pago div.costo {
         width: 100%;
         justify-content: space-between;
-        margin: 1rem;
-        padding: 0.2rem;
+        margin: 0;
     }
     
     div.pago div.button-compra button{
@@ -272,11 +295,11 @@ div section.producto-recomendados article.producto-rec div.detalles-producto div
     }
 
     div.pago div.metodo-pago {
-        margin: 1.4rem 1rem 1rem;
+        margin: 1rem 0;
     }
     
     div.pago div.tarjetas {
-        margin: 0.5rem 1rem;
+        margin: 1rem 0;
     }
 
     div.pago div.button-vaciar button{
@@ -295,14 +318,19 @@ div section.producto-recomendados article.producto-rec div.detalles-producto div
     div section.producto-recomendados article.producto-rec {
         display: flex;
         flex-direction: column;
+        margin: 0 0.5rem;
     }
 
     div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
         /* border: solid 1px black; */
-        position: relative;
-        width: 100%;
-        max-height: 165px;
-        height: 165px;
+        max-width: 300px;
+        max-height: 300px;
+        /* width: 160px;
+        height: 160px; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
