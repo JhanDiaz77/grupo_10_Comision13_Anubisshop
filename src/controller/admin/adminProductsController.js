@@ -81,7 +81,7 @@ module.exports = {
             db.Products.update({
               ...req.body,
               category_id: req.body.categoryId,
-              images: req.file ? req.file.filename : "default-image.png",
+              image: req.file ? req.file.filename : "default-image.png",
             },{
               where: {
                 id: req.params.id
