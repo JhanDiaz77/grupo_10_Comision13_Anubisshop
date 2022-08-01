@@ -233,7 +233,6 @@ header .header_nav-burger .header__nav .end-nav a{
 header .header_nav-burger.active {
     display: flex;
     opacity: 1;
-    animation: menuFadeIn 1s;
 }
 
 /* MEDIA QUERIES */
