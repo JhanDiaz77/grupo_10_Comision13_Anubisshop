@@ -33,7 +33,7 @@
                 
                 <div class="input-container">
                     <label for="image"><h2>Imagen</h2></label>
-                    <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image" value="<%= (locals.old && old.image) ? old.image : producto.image %>">
+                    <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image_" value="<%= (locals.old && old.image) ? old.image : producto.image %>">
                 <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
                 <span class="error" id="image_Error" style="color: red"></span>
                 </div>

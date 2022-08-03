@@ -5,15 +5,11 @@ function qs(element) {
 window.addEventListener("load", () => {
     let $name = qs("#name_"),
         $categoria = qs("#categoria_"),
-        $promo = qs("#promo_"),
-        $image = qs("#image_"),
         $precio = qs("#precio_"),
         $discount = qs("#discount_"),
-        $description = qs("#descriptionn"),
-        
+        $description = qs("#descriptionn"),     
         $forms= qs("#editProduct-form"),
         $submit_Error = qs ("#submit_Error")
-
         $nameProduct_Error = qs("#nameProduct_Error"),
         $category_Error = qs("#category_Error"),
         $image_Error = qs("#image_Error"),
@@ -22,7 +18,6 @@ window.addEventListener("load", () => {
         $promo_Error = qs("#promo_Error"),
         $description_Error = qs("#description_Error"),
         regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
-
 
         $name.addEventListener("blur", ()=>{
         
@@ -39,6 +34,7 @@ window.addEventListener("load", () => {
                     $name.classList.remove("is-invalid")
                     $name.classList.add("is-valid")
                     $nameProduct_Error.innerHTML = ""
+                    break;
             }
     
         })
@@ -58,7 +54,6 @@ window.addEventListener("load", () => {
                     break;
             }
             
-            /* $category_Error.style.color = "ForestGreen" */
         })
 
         $precio.addEventListener("blur", ()=>{
@@ -88,7 +83,7 @@ window.addEventListener("load", () => {
             switch (true) {
     
                 case $discount.value == "":
-                    $discount_Error.innerHTML= ""
+                    $discount_Error.innerHTML= "El campo es requerido"
                     break;
             
     
@@ -98,7 +93,7 @@ window.addEventListener("load", () => {
                     break;
 
                 case $discount.value >= 100:
-                    $discountError.innerHTML= "Debe ser un valor menor a 100"
+                    $discount_Error.innerHTML= "Debe ser un valor menor a 100"
                     $discount.classList.add("is-invalid")
                 break;
             
@@ -108,32 +103,18 @@ window.addEventListener("load", () => {
             }
         })
 
-        $promo.addEventListener("blur", ()=>{
-    
-            switch (true) { /* este no se si es tan necesario */
-                case $promo.value == "Ninguno":
-                    $promo_Error.innerHTML= ""
-                    break;
-                case $promo.value == "Oferta" || $promo.value == "Destacado":
-                    $promo_Error.innerHTML= ""
-            
-                default:
-                    break;
-            }
-        })
-
         $description.addEventListener("blur", ()=>{
 
             switch (true) {
                 case !$description.value.trim(): /* evalua si el campo esta vacio */
-                    $descriptionError.innerHTML = "El campo es requerido";
+                    $description_Error.innerHTML = "El campo es requerido";
                     $description.classList.add("is-invalid");/* agregarle estilos a esto */
                     break;
                 
                 default: 
                 $description.classList.remove("is-invalid")
                 $description.classList.add("is-valid")
-                $descriptionError.innerHTML = ""
+                $description_Error.innerHTML = ""
                 break;
             }
         })
@@ -141,28 +122,25 @@ window.addEventListener("load", () => {
         $forms.addEventListener("submit", function(event) {
 
             event.preventDefault()
-            let elements_Form = this.elements;
+            let elementsForm  = this.elements;
             let errors = false;
-        
-            for (let index = 0; index < elements_Form.length - 1; index++) {
-                if(elements_Form[index].value == ""
-                && elements_Form[index].name !== "promo"
-                && elements_Form[index].name !== "discount"
-                || elements_Form[index].classList.contains("is-invalid")){
-                    elements_Form[index].classList.add("is-invalid");
+            for (let index = 0; index < elementsForm .length -2; index++) {
+                if(elementsForm[index].value == ""
+                && elementsForm[index].name !== "promo"
+                && elementsForm[index].type !== "file"
+                && elementsForm[index].name !== "discount"
+                || elementsForm[index].classList.contains("is-invalid")){
+                    elementsForm[index].classList.add("is-invalid");
                     $submit_Error.innerHTML = "Hay errores en el formulario"
                     errors = true;
                 }
             }
     
             if(!errors){
-                alert("Creaste un nuevo producto!")
+                alert("Edit un nuevo producto!")
                 $forms.submit()
             }
         })
 
-   
-             
-   
-
+        
 })
