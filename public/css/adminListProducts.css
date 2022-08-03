@@ -8,14 +8,19 @@ main.adminTab{
 
 h1.edit{
     font-weight: bolder;
-    align-self: flex-start;
-    padding-left: 1rem;
+    align-self: flex-start;/* 
+    padding-left: 1rem; */
+    margin: 1rem;
 }
 table.list{
     background-color: #e3e4ff;
     width: 95%;
     border-style: none;
     padding-left: 10px;
+    border-radius: 8px;
+}
+table.list thead th{
+    border-radius: 8px;
 }
 
 table.list thead tr th.__id{

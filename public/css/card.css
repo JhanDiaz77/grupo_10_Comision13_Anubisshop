@@ -56,7 +56,7 @@ main div.product-final article.article-final{
     box-shadow: 1px 2px 3px 3px rgba(126, 126, 126, 0.5);
     margin: 0.5rem;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 9px;
     max-width: 240px;
     max-height: 25.5rem;
     padding: 0.5rem;
@@ -185,7 +185,7 @@ main div.product-final div.boton-press div.boton-one button:hover{
     font-size: 20px;
     color: white;
     background-color: var(--color-VioletaOscuro);  
-    border-radius: 0 0px 0 10px;  
+    border-radius: 0 9px 0 10px;  
 }
 
 @media (min-width: 550px){
