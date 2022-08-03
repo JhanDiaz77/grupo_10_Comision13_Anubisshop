@@ -144,10 +144,11 @@ window.addEventListener("load", () => {
             let elements_Form = this.elements;
             let errors = false;
         
-            for (let index = 0; index < elements_Form.length - 1; index++) {
+            for (let index = 0; index < elements_Form.length - 2; index++) {
                 if(elements_Form[index].value == ""
                 && elements_Form[index].name !== "promo"
-                && elements_Form[index].name !== "discount"
+                && elementsForm[index].type !== "file"
+                && elements_Form[index].type !== "number"
                 || elements_Form[index].classList.contains("is-invalid")){
                     elements_Form[index].classList.add("is-invalid");
                     $submit_Error.innerHTML = "Hay errores en el formulario"
