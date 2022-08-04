@@ -137,7 +137,6 @@ window.addEventListener("load", () => {
             }
     
             if(!errors){
-                alert("Edit un nuevo producto!")
                 $forms.submit()
             }
         })
