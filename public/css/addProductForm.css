@@ -60,10 +60,12 @@ form.form_editProduct div.input-container div.img-container img{
         flex-direction: row;
     }
     form.form_editProduct div.boxxOne{
+        width: 48%;
         margin: 0.5rem;
     }
     form.form_editProduct div.boxxTwo{
         margin: 0.5rem;
+        width: 48%;
     }
 
     form.form_editProduct{

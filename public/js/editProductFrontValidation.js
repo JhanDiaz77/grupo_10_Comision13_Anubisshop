@@ -142,5 +142,5 @@ window.addEventListener("load", () => {
             }
         })
 
-        
+
 })

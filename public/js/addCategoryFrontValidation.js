@@ -38,7 +38,6 @@ window.addEventListener("load", ()=>{
                 $spanError.innerHTML = "Hay errores en el formulario"
                    
             }else {
-                alert("Editaste la categoria!")
                 $formCategory.submit()
             }
     
